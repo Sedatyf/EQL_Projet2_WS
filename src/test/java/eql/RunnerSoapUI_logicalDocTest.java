@@ -26,10 +26,10 @@ import java.util.List;
  * Unit test for simple App.
  */
 @RunWith(Parameterized.class)
-public class RunnerSoapUI_parameteredTest {
+public class RunnerSoapUI_logicalDocTest {
 	private String testCaseName;
 
-	public RunnerSoapUI_parameteredTest(String testCaseName) {
+	public RunnerSoapUI_logicalDocTest(String testCaseName) {
 		this.testCaseName = testCaseName;
 	}
 
