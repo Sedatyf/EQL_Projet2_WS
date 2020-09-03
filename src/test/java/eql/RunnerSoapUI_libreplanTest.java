@@ -50,7 +50,7 @@ public class RunnerSoapUI_libreplanTest {
 
 	}
 
-	@Test
+//	@Test
 	public void testSoapUITestCase() throws XmlException, IOException, SoapUIException {
 		System.out.println("\n[START] Nom du cas de test SoapUI : " + testCaseName.toUpperCase());
 		assertTrue(true);
