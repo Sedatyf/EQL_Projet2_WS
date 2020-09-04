@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="1d612f48-193b-44db-947a-44e13b99040b" activeEnvironment="Default" name="LogicalDoc" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c72866dd-756c-40fa-a206-c9b43780d3ad" wsaVersion="NONE" name="SoapDocumentServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapDocumentServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Document?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Document?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Document?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapDocumentServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+<con:soapui-project id="1d612f48-193b-44db-947a-44e13b99040b" activeEnvironment="Default" name="LogicalDoc" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c72866dd-756c-40fa-a206-c9b43780d3ad" wsaVersion="NONE" name="SoapDocumentServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapDocumentServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Document?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Document?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Document?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapDocumentServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
   <wsdl:import location="http://localhost:8093/logicaldoc/services/Document?wsdl=Document.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
   <wsdl:binding name="SoapDocumentServiceServiceSoapBinding" type="ns1:Document">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -1762,7 +1762,7 @@
          <note>?</note>\r
       </ws:addNote>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/addNote"/></con:call></con:operation><con:operation id="eae21568-2ab1-4861-bd37-ae0df0316529" isOneWay="false" action="" name="checkin" bindingOperationName="checkin" type="Request-Response" outputName="checkinResponse" inputName="checkin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc9ad33b-9d7f-4c46-9996-d438e5c1a9d4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/addNote"/></con:call></con:operation><con:operation id="eae21568-2ab1-4861-bd37-ae0df0316529" isOneWay="false" action="" name="checkin" bindingOperationName="checkin" type="Request-Response" outputName="checkinResponse" inputName="checkin" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc9ad33b-9d7f-4c46-9996-d438e5c1a9d4" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:checkin>\r
@@ -1903,7 +1903,7 @@
          <content>cid:14958867057</content>\r
       </ws:checkinDocument>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/checkinDocument"/></con:call></con:operation><con:operation id="9ee71f27-73f6-425a-a0ad-92184e763035" isOneWay="false" action="" name="checkout" bindingOperationName="checkout" type="Request-Response" outputName="checkoutResponse" inputName="checkout" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8ce0a853-023b-4d78-9715-f681fd5f6377" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/checkinDocument"/></con:call></con:operation><con:operation id="9ee71f27-73f6-425a-a0ad-92184e763035" isOneWay="false" action="" name="checkout" bindingOperationName="checkout" type="Request-Response" outputName="checkoutResponse" inputName="checkout" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8ce0a853-023b-4d78-9715-f681fd5f6377" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:checkout>\r
@@ -1912,7 +1912,7 @@
          <docId>?</docId>\r
       </ws:checkout>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/checkout"/></con:call></con:operation><con:operation id="2ad7a8f0-40b7-4ad9-b5a7-0ec992889bc3" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e473c54f-3f1e-4b66-9e92-10ff7413077a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/checkout"/></con:call></con:operation><con:operation id="2ad7a8f0-40b7-4ad9-b5a7-0ec992889bc3" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e473c54f-3f1e-4b66-9e92-10ff7413077a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
    <soapenv:Header/>
    <soapenv:Body>
       <ws:create>
@@ -2043,7 +2043,7 @@
          <type>?</type>\r
       </ws:createAlias>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createAlias"/></con:call></con:operation><con:operation id="763dedf8-a530-4b27-86b6-b3b8f445ff6c" isOneWay="false" action="" name="createDownloadTicket" bindingOperationName="createDownloadTicket" type="Request-Response" outputName="createDownloadTicketResponse" inputName="createDownloadTicket" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da17330e-f8d3-4276-aa00-a51e74d3d9f0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createAlias"/></con:call></con:operation><con:operation id="763dedf8-a530-4b27-86b6-b3b8f445ff6c" isOneWay="false" action="" name="createDownloadTicket" bindingOperationName="createDownloadTicket" type="Request-Response" outputName="createDownloadTicketResponse" inputName="createDownloadTicket" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da17330e-f8d3-4276-aa00-a51e74d3d9f0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createDownloadTicket>\r
@@ -2058,7 +2058,7 @@
          <expireDate>?</expireDate>\r
       </ws:createDownloadTicket>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createDownloadTicket"/></con:call></con:operation><con:operation id="652bd91f-83cf-4017-a53a-d446903f8f15" isOneWay="false" action="" name="createPdf" bindingOperationName="createPdf" type="Request-Response" outputName="createPdfResponse" inputName="createPdf" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6490ed7a-3cc7-4168-91e7-744708ea7563" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createDownloadTicket"/></con:call></con:operation><con:operation id="652bd91f-83cf-4017-a53a-d446903f8f15" isOneWay="false" action="" name="createPdf" bindingOperationName="createPdf" type="Request-Response" outputName="createPdfResponse" inputName="createPdf" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6490ed7a-3cc7-4168-91e7-744708ea7563" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createPdf>\r
@@ -2069,7 +2069,7 @@
          <fileVersion>?</fileVersion>\r
       </ws:createPdf>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createPdf"/></con:call></con:operation><con:operation id="f8428681-638a-4afc-bde6-b1fd496e905c" isOneWay="false" action="" name="createThumbnail" bindingOperationName="createThumbnail" type="Request-Response" outputName="createThumbnailResponse" inputName="createThumbnail" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4957912e-ef61-418c-bd3f-2d291f3f8c85" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createPdf"/></con:call></con:operation><con:operation id="f8428681-638a-4afc-bde6-b1fd496e905c" isOneWay="false" action="" name="createThumbnail" bindingOperationName="createThumbnail" type="Request-Response" outputName="createThumbnailResponse" inputName="createThumbnail" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4957912e-ef61-418c-bd3f-2d291f3f8c85" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createThumbnail>\r
@@ -2080,7 +2080,7 @@
          <fileVersion>?</fileVersion>\r
       </ws:createThumbnail>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createThumbnail"/></con:call></con:operation><con:operation id="d2a1efd4-a6e7-467c-be0d-2648d08ae6aa" isOneWay="false" action="" name="delete" bindingOperationName="delete" type="Request-Response" outputName="deleteResponse" inputName="delete" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5915c127-36ac-4337-bdd6-ff20869acfeb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/createThumbnail"/></con:call></con:operation><con:operation id="d2a1efd4-a6e7-467c-be0d-2648d08ae6aa" isOneWay="false" action="" name="delete" bindingOperationName="delete" type="Request-Response" outputName="deleteResponse" inputName="delete" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5915c127-36ac-4337-bdd6-ff20869acfeb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:delete>\r
@@ -2089,7 +2089,7 @@
          <docId>?</docId>\r
       </ws:delete>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/delete"/></con:call></con:operation><con:operation id="d15f1e34-74e1-4888-bea2-5bfa41296a6b" isOneWay="false" action="" name="deleteLink" bindingOperationName="deleteLink" type="Request-Response" outputName="deleteLinkResponse" inputName="deleteLink" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9224d882-e221-4451-8db3-06b055b74547" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/delete"/></con:call></con:operation><con:operation id="d15f1e34-74e1-4888-bea2-5bfa41296a6b" isOneWay="false" action="" name="deleteLink" bindingOperationName="deleteLink" type="Request-Response" outputName="deleteLinkResponse" inputName="deleteLink" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9224d882-e221-4451-8db3-06b055b74547" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:deleteLink>\r
@@ -2098,7 +2098,7 @@
          <id>?</id>\r
       </ws:deleteLink>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteLink"/></con:call></con:operation><con:operation id="c0b202ea-f1f8-400f-9137-ff68adbd6b0f" isOneWay="false" action="" name="deleteNote" bindingOperationName="deleteNote" type="Request-Response" outputName="deleteNoteResponse" inputName="deleteNote" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a251c758-87ab-431f-96d3-0097274a3cbc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteLink"/></con:call></con:operation><con:operation id="c0b202ea-f1f8-400f-9137-ff68adbd6b0f" isOneWay="false" action="" name="deleteNote" bindingOperationName="deleteNote" type="Request-Response" outputName="deleteNoteResponse" inputName="deleteNote" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a251c758-87ab-431f-96d3-0097274a3cbc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:deleteNote>\r
@@ -2107,7 +2107,7 @@
          <noteId>?</noteId>\r
       </ws:deleteNote>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteNote"/></con:call></con:operation><con:operation id="9f9d033f-d864-423d-94e2-da08340df0b6" isOneWay="false" action="" name="deleteVersion" bindingOperationName="deleteVersion" type="Request-Response" outputName="deleteVersionResponse" inputName="deleteVersion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab9675d3-7b98-4ac1-b29b-92cfeff7ff0d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteNote"/></con:call></con:operation><con:operation id="9f9d033f-d864-423d-94e2-da08340df0b6" isOneWay="false" action="" name="deleteVersion" bindingOperationName="deleteVersion" type="Request-Response" outputName="deleteVersionResponse" inputName="deleteVersion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab9675d3-7b98-4ac1-b29b-92cfeff7ff0d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:deleteVersion>\r
@@ -2118,7 +2118,7 @@
          <version>?</version>\r
       </ws:deleteVersion>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteVersion"/></con:call></con:operation><con:operation id="f7c8436f-efb3-41ae-b0a3-b2b04170fa1f" isOneWay="false" action="" name="getAliases" bindingOperationName="getAliases" type="Request-Response" outputName="getAliasesResponse" inputName="getAliases" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6071c0a2-3035-4dc4-9d48-17f65fafe00c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/deleteVersion"/></con:call></con:operation><con:operation id="f7c8436f-efb3-41ae-b0a3-b2b04170fa1f" isOneWay="false" action="" name="getAliases" bindingOperationName="getAliases" type="Request-Response" outputName="getAliasesResponse" inputName="getAliases" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6071c0a2-3035-4dc4-9d48-17f65fafe00c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getAliases>\r
@@ -2127,7 +2127,7 @@
          <docId>?</docId>\r
       </ws:getAliases>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getAliases"/></con:call></con:operation><con:operation id="99070646-03e0-47de-a883-c7d60fc7c292" isOneWay="false" action="" name="getContent" bindingOperationName="getContent" type="Request-Response" outputName="getContentResponse" inputName="getContent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f3bae2db-1efd-4da1-bc1e-02a14d425283" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getAliases"/></con:call></con:operation><con:operation id="99070646-03e0-47de-a883-c7d60fc7c292" isOneWay="false" action="" name="getContent" bindingOperationName="getContent" type="Request-Response" outputName="getContentResponse" inputName="getContent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f3bae2db-1efd-4da1-bc1e-02a14d425283" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getContent>\r
@@ -2136,16 +2136,16 @@
          <docId>?</docId>\r
       </ws:getContent>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getContent"/></con:call></con:operation><con:operation id="efca4198-371b-494a-a25d-18064a0f918c" isOneWay="false" action="" name="getDocument" bindingOperationName="getDocument" type="Request-Response" outputName="getDocumentResponse" inputName="getDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b747574-d8cf-483f-ad6e-9e3c265c54af" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getContent"/></con:call></con:operation><con:operation id="efca4198-371b-494a-a25d-18064a0f918c" isOneWay="false" action="" name="getDocument" bindingOperationName="getDocument" type="Request-Response" outputName="getDocumentResponse" inputName="getDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b747574-d8cf-483f-ad6e-9e3c265c54af" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getDocument>\r
          <!--Optional:-->\r
-         <sid>?</sid>\r
-         <docId>?</docId>\r
+         <sid>acb6cb01-5b74-4c76-90c0-11bcbcee0173</sid>\r
+         <docId>100</docId>\r
       </ws:getDocument>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getDocument"/></con:call></con:operation><con:operation id="0cfeba3f-0a11-46c1-9e49-ec8358d179b6" isOneWay="false" action="" name="getDocumentByCustomId" bindingOperationName="getDocumentByCustomId" type="Request-Response" outputName="getDocumentByCustomIdResponse" inputName="getDocumentByCustomId" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8cc84e4c-af45-4abc-883d-6a001b103086" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0cfeba3f-0a11-46c1-9e49-ec8358d179b6" isOneWay="false" action="" name="getDocumentByCustomId" bindingOperationName="getDocumentByCustomId" type="Request-Response" outputName="getDocumentByCustomIdResponse" inputName="getDocumentByCustomId" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8cc84e4c-af45-4abc-883d-6a001b103086" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getDocumentByCustomId>\r
@@ -2155,7 +2155,7 @@
          <customId>?</customId>\r
       </ws:getDocumentByCustomId>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getDocumentByCustomId"/></con:call></con:operation><con:operation id="21db9ab1-6a5e-4c63-8b3a-9b7cb470c52c" isOneWay="false" action="" name="getDocuments" bindingOperationName="getDocuments" type="Request-Response" outputName="getDocumentsResponse" inputName="getDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8d63b4e2-1d85-4cf1-bfba-301ef3b007d3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getDocumentByCustomId"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="21db9ab1-6a5e-4c63-8b3a-9b7cb470c52c" isOneWay="false" action="" name="getDocuments" bindingOperationName="getDocuments" type="Request-Response" outputName="getDocumentsResponse" inputName="getDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8d63b4e2-1d85-4cf1-bfba-301ef3b007d3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getDocuments>\r
@@ -2174,7 +2174,7 @@
          <docId>?</docId>\r
       </ws:getExtractedText>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getExtractedText"/></con:call></con:operation><con:operation id="b926928b-ae1a-4802-b9cc-c0228311ab09" isOneWay="false" action="" name="getLinks" bindingOperationName="getLinks" type="Request-Response" outputName="getLinksResponse" inputName="getLinks" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a6660a89-e837-4be5-b666-9bd6e8c618e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getExtractedText"/></con:call></con:operation><con:operation id="b926928b-ae1a-4802-b9cc-c0228311ab09" isOneWay="false" action="" name="getLinks" bindingOperationName="getLinks" type="Request-Response" outputName="getLinksResponse" inputName="getLinks" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a6660a89-e837-4be5-b666-9bd6e8c618e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getLinks>\r
@@ -2183,7 +2183,7 @@
          <docId>?</docId>\r
       </ws:getLinks>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getLinks"/></con:call></con:operation><con:operation id="e86238c1-5f0f-4b4d-8cab-584b097067b9" isOneWay="false" action="" name="getNotes" bindingOperationName="getNotes" type="Request-Response" outputName="getNotesResponse" inputName="getNotes" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47c4fdf7-6367-46bd-87ec-9fb2c2706179" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getLinks"/></con:call></con:operation><con:operation id="e86238c1-5f0f-4b4d-8cab-584b097067b9" isOneWay="false" action="" name="getNotes" bindingOperationName="getNotes" type="Request-Response" outputName="getNotesResponse" inputName="getNotes" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47c4fdf7-6367-46bd-87ec-9fb2c2706179" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getNotes>\r
@@ -2192,7 +2192,7 @@
          <docId>?</docId>\r
       </ws:getNotes>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getNotes"/></con:call></con:operation><con:operation id="219ff9a2-8d5a-4f03-90f9-a6b862efc1b7" isOneWay="false" action="" name="getRatings" bindingOperationName="getRatings" type="Request-Response" outputName="getRatingsResponse" inputName="getRatings" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="115365e4-a7e7-47e5-8971-bddcccf5ed2d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getNotes"/></con:call></con:operation><con:operation id="219ff9a2-8d5a-4f03-90f9-a6b862efc1b7" isOneWay="false" action="" name="getRatings" bindingOperationName="getRatings" type="Request-Response" outputName="getRatingsResponse" inputName="getRatings" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="115365e4-a7e7-47e5-8971-bddcccf5ed2d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getRatings>\r
@@ -2201,7 +2201,7 @@
          <docId>?</docId>\r
       </ws:getRatings>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getRatings"/></con:call></con:operation><con:operation id="0c98544d-39a4-45d1-97f5-9046de8c2e38" isOneWay="false" action="" name="getRecentDocuments" bindingOperationName="getRecentDocuments" type="Request-Response" outputName="getRecentDocumentsResponse" inputName="getRecentDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94ba6764-293e-40c5-92aa-50e4ae39dcf1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getRatings"/></con:call></con:operation><con:operation id="0c98544d-39a4-45d1-97f5-9046de8c2e38" isOneWay="false" action="" name="getRecentDocuments" bindingOperationName="getRecentDocuments" type="Request-Response" outputName="getRecentDocumentsResponse" inputName="getRecentDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94ba6764-293e-40c5-92aa-50e4ae39dcf1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getRecentDocuments>\r
@@ -2211,7 +2211,7 @@
          <maxHits>?</maxHits>\r
       </ws:getRecentDocuments>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getRecentDocuments"/></con:call></con:operation><con:operation id="14738c65-780e-439a-8d03-1593c99b5044" isOneWay="false" action="" name="getResource" bindingOperationName="getResource" type="Request-Response" outputName="getResourceResponse" inputName="getResource" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="149f5366-888a-40eb-92f6-1fc4512f2712" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getRecentDocuments"/></con:call></con:operation><con:operation id="14738c65-780e-439a-8d03-1593c99b5044" isOneWay="false" action="" name="getResource" bindingOperationName="getResource" type="Request-Response" outputName="getResourceResponse" inputName="getResource" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="149f5366-888a-40eb-92f6-1fc4512f2712" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getResource>\r
@@ -2224,7 +2224,7 @@
          <suffix>?</suffix>\r
       </ws:getResource>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getResource"/></con:call></con:operation><con:operation id="f54a6adf-23e8-41c1-8555-a8b48a5adf5d" isOneWay="false" action="" name="getVersionContent" bindingOperationName="getVersionContent" type="Request-Response" outputName="getVersionContentResponse" inputName="getVersionContent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df3dff6b-3089-4a17-aaa9-753786940f3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getResource"/></con:call></con:operation><con:operation id="f54a6adf-23e8-41c1-8555-a8b48a5adf5d" isOneWay="false" action="" name="getVersionContent" bindingOperationName="getVersionContent" type="Request-Response" outputName="getVersionContentResponse" inputName="getVersionContent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df3dff6b-3089-4a17-aaa9-753786940f3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getVersionContent>\r
@@ -2235,7 +2235,7 @@
          <version>?</version>\r
       </ws:getVersionContent>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getVersionContent"/></con:call></con:operation><con:operation id="6fe11d77-97a0-4942-8cd0-bce7011eabbf" isOneWay="false" action="" name="getVersions" bindingOperationName="getVersions" type="Request-Response" outputName="getVersionsResponse" inputName="getVersions" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5350b365-a1d7-494a-9c6b-63e86a5cf868" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getVersionContent"/></con:call></con:operation><con:operation id="6fe11d77-97a0-4942-8cd0-bce7011eabbf" isOneWay="false" action="" name="getVersions" bindingOperationName="getVersions" type="Request-Response" outputName="getVersionsResponse" inputName="getVersions" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5350b365-a1d7-494a-9c6b-63e86a5cf868" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getVersions>\r
@@ -2244,7 +2244,7 @@
          <docId>?</docId>\r
       </ws:getVersions>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getVersions"/></con:call></con:operation><con:operation id="20b01ba0-7658-40d0-ad54-51c779f142bd" isOneWay="false" action="" name="isReadable" bindingOperationName="isReadable" type="Request-Response" outputName="isReadableResponse" inputName="isReadable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b7d5dc9-a208-4233-950c-e233711af7b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/getVersions"/></con:call></con:operation><con:operation id="20b01ba0-7658-40d0-ad54-51c779f142bd" isOneWay="false" action="" name="isReadable" bindingOperationName="isReadable" type="Request-Response" outputName="isReadableResponse" inputName="isReadable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b7d5dc9-a208-4233-950c-e233711af7b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:isReadable>\r
@@ -2253,7 +2253,7 @@
          <docId>?</docId>\r
       </ws:isReadable>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/isReadable"/></con:call></con:operation><con:operation id="59758163-4928-4877-97f2-612683f18c69" isOneWay="false" action="" name="link" bindingOperationName="link" type="Request-Response" outputName="linkResponse" inputName="link" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a76f5cb-9573-4f0f-bf6a-5b9a12725c03" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/isReadable"/></con:call></con:operation><con:operation id="59758163-4928-4877-97f2-612683f18c69" isOneWay="false" action="" name="link" bindingOperationName="link" type="Request-Response" outputName="linkResponse" inputName="link" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a76f5cb-9573-4f0f-bf6a-5b9a12725c03" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:link>\r
@@ -2265,7 +2265,7 @@
          <type>?</type>\r
       </ws:link>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/link"/></con:call></con:operation><con:operation id="945b67f7-12d8-4273-ac99-0f0df3ffae87" isOneWay="false" action="" name="listDocuments" bindingOperationName="listDocuments" type="Request-Response" outputName="listDocumentsResponse" inputName="listDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9e9cb651-ca4d-4d18-b025-75ccbc5037e8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/link"/></con:call></con:operation><con:operation id="945b67f7-12d8-4273-ac99-0f0df3ffae87" isOneWay="false" action="" name="listDocuments" bindingOperationName="listDocuments" type="Request-Response" outputName="listDocumentsResponse" inputName="listDocuments" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9e9cb651-ca4d-4d18-b025-75ccbc5037e8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:listDocuments>\r
@@ -2285,7 +2285,7 @@
          <docId>?</docId>\r
       </ws:lock>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/lock"/></con:call></con:operation><con:operation id="8ec14f59-a839-469e-83c7-341a9b86a31a" isOneWay="false" action="" name="move" bindingOperationName="move" type="Request-Response" outputName="moveResponse" inputName="move" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb2e863b-5429-4c4d-bef6-37e59f81c598" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/lock"/></con:call></con:operation><con:operation id="8ec14f59-a839-469e-83c7-341a9b86a31a" isOneWay="false" action="" name="move" bindingOperationName="move" type="Request-Response" outputName="moveResponse" inputName="move" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb2e863b-5429-4c4d-bef6-37e59f81c598" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:move>\r
@@ -2295,7 +2295,7 @@
          <folderId>?</folderId>\r
       </ws:move>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/move"/></con:call></con:operation><con:operation id="ee758cb9-0086-48be-b534-dd20acec8b80" isOneWay="false" action="" name="promoteVersion" bindingOperationName="promoteVersion" type="Request-Response" outputName="promoteVersionResponse" inputName="promoteVersion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="070284f6-d09a-49c7-bfb5-45c76a2c80d8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/move"/></con:call></con:operation><con:operation id="ee758cb9-0086-48be-b534-dd20acec8b80" isOneWay="false" action="" name="promoteVersion" bindingOperationName="promoteVersion" type="Request-Response" outputName="promoteVersionResponse" inputName="promoteVersion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="070284f6-d09a-49c7-bfb5-45c76a2c80d8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:promoteVersion>\r
@@ -2306,7 +2306,7 @@
          <version>?</version>\r
       </ws:promoteVersion>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/promoteVersion"/></con:call></con:operation><con:operation id="c969ebd6-3ff9-4abd-aea0-c467df50cda8" isOneWay="false" action="" name="rateDocument" bindingOperationName="rateDocument" type="Request-Response" outputName="rateDocumentResponse" inputName="rateDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2b30fc66-f8f1-4d08-8790-2c4eef62d52b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/promoteVersion"/></con:call></con:operation><con:operation id="c969ebd6-3ff9-4abd-aea0-c467df50cda8" isOneWay="false" action="" name="rateDocument" bindingOperationName="rateDocument" type="Request-Response" outputName="rateDocumentResponse" inputName="rateDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2b30fc66-f8f1-4d08-8790-2c4eef62d52b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:rateDocument>\r
@@ -2316,7 +2316,7 @@
          <vote>?</vote>\r
       </ws:rateDocument>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/rateDocument"/></con:call></con:operation><con:operation id="993de6bf-2ee0-457f-8c7f-2f3ab4e43ed6" isOneWay="false" action="" name="reindex" bindingOperationName="reindex" type="Request-Response" outputName="reindexResponse" inputName="reindex" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e28117bc-cbd9-4eaa-b174-8fb49439cebb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/rateDocument"/></con:call></con:operation><con:operation id="993de6bf-2ee0-457f-8c7f-2f3ab4e43ed6" isOneWay="false" action="" name="reindex" bindingOperationName="reindex" type="Request-Response" outputName="reindexResponse" inputName="reindex" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e28117bc-cbd9-4eaa-b174-8fb49439cebb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:reindex>\r
@@ -2327,7 +2327,7 @@
          <content>?</content>\r
       </ws:reindex>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/reindex"/></con:call></con:operation><con:operation id="51e97142-582c-4932-812c-76b58e56ed38" isOneWay="false" action="" name="rename" bindingOperationName="rename" type="Request-Response" outputName="renameResponse" inputName="rename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4e6e2fe2-4978-40ff-8303-78deed5f8fac" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/reindex"/></con:call></con:operation><con:operation id="51e97142-582c-4932-812c-76b58e56ed38" isOneWay="false" action="" name="rename" bindingOperationName="rename" type="Request-Response" outputName="renameResponse" inputName="rename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4e6e2fe2-4978-40ff-8303-78deed5f8fac" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:rename>\r
@@ -2338,7 +2338,7 @@
          <name>?</name>\r
       </ws:rename>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/rename"/></con:call></con:operation><con:operation id="98577200-a341-44da-8c09-a842e0f076b5" isOneWay="false" action="" name="replaceFile" bindingOperationName="replaceFile" type="Request-Response" outputName="replaceFileResponse" inputName="replaceFile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="274587eb-5c6e-4151-9a9f-8c3a86b1fe75" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/rename"/></con:call></con:operation><con:operation id="98577200-a341-44da-8c09-a842e0f076b5" isOneWay="false" action="" name="replaceFile" bindingOperationName="replaceFile" type="Request-Response" outputName="replaceFileResponse" inputName="replaceFile" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="274587eb-5c6e-4151-9a9f-8c3a86b1fe75" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:replaceFile>\r
@@ -2353,7 +2353,7 @@
          <content>cid:595074938377</content>\r
       </ws:replaceFile>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/replaceFile"/></con:call></con:operation><con:operation id="2a2a9dc8-3c64-4659-98c8-a2fa0eb949e7" isOneWay="false" action="" name="restore" bindingOperationName="restore" type="Request-Response" outputName="restoreResponse" inputName="restore" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a037dc55-5a6a-46f1-9095-e42171fc4122" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/replaceFile"/></con:call></con:operation><con:operation id="2a2a9dc8-3c64-4659-98c8-a2fa0eb949e7" isOneWay="false" action="" name="restore" bindingOperationName="restore" type="Request-Response" outputName="restoreResponse" inputName="restore" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a037dc55-5a6a-46f1-9095-e42171fc4122" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:restore>\r
@@ -2363,7 +2363,7 @@
          <folderId>?</folderId>\r
       </ws:restore>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/restore"/></con:call></con:operation><con:operation id="bc23d5ed-e4b5-4022-97c2-cbe586e719f5" isOneWay="false" action="" name="sendEmail" bindingOperationName="sendEmail" type="Request-Response" outputName="sendEmailResponse" inputName="sendEmail" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad7ace35-d7bf-41b1-b7be-75a9e0f0ca64" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/restore"/></con:call></con:operation><con:operation id="bc23d5ed-e4b5-4022-97c2-cbe586e719f5" isOneWay="false" action="" name="sendEmail" bindingOperationName="sendEmail" type="Request-Response" outputName="sendEmailResponse" inputName="sendEmail" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ad7ace35-d7bf-41b1-b7be-75a9e0f0ca64" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:sendEmail>\r
@@ -2379,7 +2379,7 @@
          <message>?</message>\r
       </ws:sendEmail>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/sendEmail"/></con:call></con:operation><con:operation id="59c2fc3e-32c5-4e7b-9cc9-9ed3b76d9679" isOneWay="false" action="" name="setPassword" bindingOperationName="setPassword" type="Request-Response" outputName="setPasswordResponse" inputName="setPassword" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fb4da9f3-5445-48bd-b6a8-d1b4571ac5a1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/sendEmail"/></con:call></con:operation><con:operation id="59c2fc3e-32c5-4e7b-9cc9-9ed3b76d9679" isOneWay="false" action="" name="setPassword" bindingOperationName="setPassword" type="Request-Response" outputName="setPasswordResponse" inputName="setPassword" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fb4da9f3-5445-48bd-b6a8-d1b4571ac5a1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:setPassword>\r
@@ -2390,7 +2390,7 @@
          <password>?</password>\r
       </ws:setPassword>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/setPassword"/></con:call></con:operation><con:operation id="25e290ce-9da7-4dc5-8533-deb733a54da8" isOneWay="false" action="" name="unlock" bindingOperationName="unlock" type="Request-Response" outputName="unlockResponse" inputName="unlock" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="628134e1-cd10-47c4-a595-1330b9fa90b4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/setPassword"/></con:call></con:operation><con:operation id="25e290ce-9da7-4dc5-8533-deb733a54da8" isOneWay="false" action="" name="unlock" bindingOperationName="unlock" type="Request-Response" outputName="unlockResponse" inputName="unlock" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="628134e1-cd10-47c4-a595-1330b9fa90b4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:unlock>\r
@@ -2399,7 +2399,7 @@
          <docId>?</docId>\r
       </ws:unlock>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unlock"/></con:call></con:operation><con:operation id="a59f23ed-d77b-4b81-aa61-f4da2dcd3d02" isOneWay="false" action="" name="unprotect" bindingOperationName="unprotect" type="Request-Response" outputName="unprotectResponse" inputName="unprotect" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="95716fc3-ed6c-4671-a44c-62e462fc6aae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unlock"/></con:call></con:operation><con:operation id="a59f23ed-d77b-4b81-aa61-f4da2dcd3d02" isOneWay="false" action="" name="unprotect" bindingOperationName="unprotect" type="Request-Response" outputName="unprotectResponse" inputName="unprotect" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="95716fc3-ed6c-4671-a44c-62e462fc6aae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:unprotect>\r
@@ -2410,7 +2410,7 @@
          <password>?</password>\r
       </ws:unprotect>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unprotect"/></con:call></con:operation><con:operation id="6304ce4a-6cef-497f-9b07-739cbd59bc8c" isOneWay="false" action="" name="unsetPassword" bindingOperationName="unsetPassword" type="Request-Response" outputName="unsetPasswordResponse" inputName="unsetPassword" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2fc24e75-9e52-4a81-9675-4b322f6c4812" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unprotect"/></con:call></con:operation><con:operation id="6304ce4a-6cef-497f-9b07-739cbd59bc8c" isOneWay="false" action="" name="unsetPassword" bindingOperationName="unsetPassword" type="Request-Response" outputName="unsetPasswordResponse" inputName="unsetPassword" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2fc24e75-9e52-4a81-9675-4b322f6c4812" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:unsetPassword>\r
@@ -2421,7 +2421,7 @@
          <currentPassword>?</currentPassword>\r
       </ws:unsetPassword>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unsetPassword"/></con:call></con:operation><con:operation id="87cced5f-65de-4940-a518-ec4881861afe" isOneWay="false" action="" name="update" bindingOperationName="update" type="Request-Response" outputName="updateResponse" inputName="update" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="175d69e6-525a-4ecd-adf3-1b90d2d16161" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/unsetPassword"/></con:call></con:operation><con:operation id="87cced5f-65de-4940-a518-ec4881861afe" isOneWay="false" action="" name="update" bindingOperationName="update" type="Request-Response" outputName="updateResponse" inputName="update" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="175d69e6-525a-4ecd-adf3-1b90d2d16161" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:update>\r
@@ -2538,7 +2538,7 @@
          </document>\r
       </ws:update>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/update"/></con:call></con:operation><con:operation id="a91c27fe-76c9-4b7f-80d1-88b756c9f155" isOneWay="false" action="" name="upload" bindingOperationName="upload" type="Request-Response" outputName="uploadResponse" inputName="upload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d88e6308-99ff-470c-a2bd-1aaaa724a65b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/update"/></con:call></con:operation><con:operation id="a91c27fe-76c9-4b7f-80d1-88b756c9f155" isOneWay="false" action="" name="upload" bindingOperationName="upload" type="Request-Response" outputName="uploadResponse" inputName="upload" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d88e6308-99ff-470c-a2bd-1aaaa724a65b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:upload>\r
@@ -2557,7 +2557,7 @@
          <content>cid:759768205926</content>\r
       </ws:upload>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/upload"/></con:call></con:operation><con:operation id="7f22a874-f9ba-4241-b303-96ce115d3a14" isOneWay="false" action="" name="uploadResource" bindingOperationName="uploadResource" type="Request-Response" outputName="uploadResourceResponse" inputName="uploadResource" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ccba64ad-ea46-4fe8-b03f-03eaf36a808f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/upload"/></con:call></con:operation><con:operation id="7f22a874-f9ba-4241-b303-96ce115d3a14" isOneWay="false" action="" name="uploadResource" bindingOperationName="uploadResource" type="Request-Response" outputName="uploadResourceResponse" inputName="uploadResource" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ccba64ad-ea46-4fe8-b03f-03eaf36a808f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:uploadResource>\r
@@ -2572,7 +2572,7 @@
          <content>cid:1289539405712</content>\r
       </ws:uploadResource>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/uploadResource"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="9327f522-ae6b-41ed-a970-38a372a2775e" wsaVersion="NONE" name="SoapAuthServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapAuthServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Auth?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Auth?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Auth?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapAuthServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/uploadResource"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="9327f522-ae6b-41ed-a970-38a372a2775e" wsaVersion="NONE" name="SoapAuthServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapAuthServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Auth?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Auth?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Auth?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapAuthServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
   <wsdl:import location="http://localhost:8093/logicaldoc/services/Auth?wsdl=Auth.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
   <wsdl:binding name="SoapAuthServiceServiceSoapBinding" type="ns1:Auth">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -2733,15 +2733,15 @@
          <password>admin</password>\r
       </ws:login>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7da65569-4515-4da0-996b-398ae0250bf0" isOneWay="false" action="" name="logout" bindingOperationName="logout" type="Request-Response" outputName="logoutResponse" inputName="logout" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b587f72-47e5-41c6-9f81-cc46a0721f50" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7da65569-4515-4da0-996b-398ae0250bf0" isOneWay="false" action="" name="logout" bindingOperationName="logout" type="Request-Response" outputName="logoutResponse" inputName="logout" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b587f72-47e5-41c6-9f81-cc46a0721f50" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:logout>\r
          <!--Optional:-->\r
-         <sid>?</sid>\r
+         <sid>55f5b5db-3c72-499e-9b9d-55922ef8e516</sid>\r
       </ws:logout>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/logout"/></con:call></con:operation><con:operation id="10e868d2-bf68-4af3-86a7-63fc6051d5f3" isOneWay="false" action="" name="renew" bindingOperationName="renew" type="Request-Response" outputName="renewResponse" inputName="renew" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="55fbbae9-bba5-4915-8cfc-2b965a1d762e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/logout"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="10e868d2-bf68-4af3-86a7-63fc6051d5f3" isOneWay="false" action="" name="renew" bindingOperationName="renew" type="Request-Response" outputName="renewResponse" inputName="renew" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="55fbbae9-bba5-4915-8cfc-2b965a1d762e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:renew>\r
@@ -2749,15 +2749,15 @@
          <sid>?</sid>\r
       </ws:renew>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/renew"/></con:call></con:operation><con:operation id="da2d98d4-49de-4dad-a6a4-c545a02db56d" isOneWay="false" action="" name="valid" bindingOperationName="valid" type="Request-Response" outputName="validResponse" inputName="valid" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94b509e4-c914-43fe-b3af-54b2c01ad245" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/renew"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="da2d98d4-49de-4dad-a6a4-c545a02db56d" isOneWay="false" action="" name="valid" bindingOperationName="valid" type="Request-Response" outputName="validResponse" inputName="valid" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="94b509e4-c914-43fe-b3af-54b2c01ad245" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:valid>\r
          <!--Optional:-->\r
-         <sid>?</sid>\r
+         <sid>55f5b5db-3c72-499e-9b9d-55922ef8e516</sid>\r
       </ws:valid>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/valid"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="cc497a9f-97fa-430e-8e64-062d44c62d90" wsaVersion="NONE" name="SoapFolderServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapFolderServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Folder?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Folder?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Folder?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapFolderServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/valid"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="cc497a9f-97fa-430e-8e64-062d44c62d90" wsaVersion="NONE" name="SoapFolderServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapFolderServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Folder?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Folder?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Folder?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapFolderServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
   <wsdl:import location="http://localhost:8093/logicaldoc/services/Folder?wsdl=Folder.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
   <wsdl:binding name="SoapFolderServiceServiceSoapBinding" type="ns1:Folder">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -3670,7 +3670,7 @@
          <inheritSecurity>?</inheritSecurity>\r
       </ws:copy>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/copy"/></con:call></con:operation><con:operation id="02b37538-e05d-468e-a531-13503b8d35fd" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="02a3df30-e84b-4eeb-9376-4e8256e170aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/copy"/></con:call></con:operation><con:operation id="02b37538-e05d-468e-a531-13503b8d35fd" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="02a3df30-e84b-4eeb-9376-4e8256e170aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:create>\r
@@ -3736,7 +3736,7 @@
          </folder>\r
       </ws:create>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/create"/></con:call></con:operation><con:operation id="8469fc7c-60e7-409f-bb78-e54c0f5d9789" isOneWay="false" action="" name="createAlias" bindingOperationName="createAlias" type="Request-Response" outputName="createAliasResponse" inputName="createAlias" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73f76ff9-0f45-46a0-8de0-a7da357cb126" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/create"/></con:call></con:operation><con:operation id="8469fc7c-60e7-409f-bb78-e54c0f5d9789" isOneWay="false" action="" name="createAlias" bindingOperationName="createAlias" type="Request-Response" outputName="createAliasResponse" inputName="createAlias" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73f76ff9-0f45-46a0-8de0-a7da357cb126" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createAlias>\r
@@ -3746,7 +3746,7 @@
          <arg2>?</arg2>\r
       </ws:createAlias>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createAlias"/></con:call></con:operation><con:operation id="de37a3b6-3d75-45d1-8735-b36c0536135c" isOneWay="false" action="" name="createFolder" bindingOperationName="createFolder" type="Request-Response" outputName="createFolderResponse" inputName="createFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="46293564-e80b-4177-be9e-e08992a231e2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createAlias"/></con:call></con:operation><con:operation id="de37a3b6-3d75-45d1-8735-b36c0536135c" isOneWay="false" action="" name="createFolder" bindingOperationName="createFolder" type="Request-Response" outputName="createFolderResponse" inputName="createFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="46293564-e80b-4177-be9e-e08992a231e2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createFolder>\r
@@ -3768,7 +3768,7 @@
          <path>?</path>\r
       </ws:createPath>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createPath"/></con:call></con:operation><con:operation id="b55c2640-817a-4038-a0d3-787162331850" isOneWay="false" action="" name="delete" bindingOperationName="delete" type="Request-Response" outputName="deleteResponse" inputName="delete" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0e01da2e-16d3-4e98-948f-f004df584407" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createPath"/></con:call></con:operation><con:operation id="b55c2640-817a-4038-a0d3-787162331850" isOneWay="false" action="" name="delete" bindingOperationName="delete" type="Request-Response" outputName="deleteResponse" inputName="delete" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0e01da2e-16d3-4e98-948f-f004df584407" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:delete>\r
@@ -3777,7 +3777,7 @@
          <folderId>?</folderId>\r
       </ws:delete>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/delete"/></con:call></con:operation><con:operation id="6cdd82d4-98cc-4a81-b41b-254a3f965478" isOneWay="false" action="" name="findByPath" bindingOperationName="findByPath" type="Request-Response" outputName="findByPathResponse" inputName="findByPath" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="156f98c4-95dd-49f9-bf43-1dd9caa20dcc" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/delete"/></con:call></con:operation><con:operation id="6cdd82d4-98cc-4a81-b41b-254a3f965478" isOneWay="false" action="" name="findByPath" bindingOperationName="findByPath" type="Request-Response" outputName="findByPathResponse" inputName="findByPath" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="156f98c4-95dd-49f9-bf43-1dd9caa20dcc" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:findByPath>\r
@@ -3795,7 +3795,7 @@
          <sid>?</sid>\r
       </ws:getDefaultWorkspace>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getDefaultWorkspace"/></con:call></con:operation><con:operation id="efa640db-b9d4-4b18-abed-ed77402c3caf" isOneWay="false" action="" name="getFolder" bindingOperationName="getFolder" type="Request-Response" outputName="getFolderResponse" inputName="getFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56b5cd59-9c3b-4f65-a844-058c52795ba5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getDefaultWorkspace"/></con:call></con:operation><con:operation id="efa640db-b9d4-4b18-abed-ed77402c3caf" isOneWay="false" action="" name="getFolder" bindingOperationName="getFolder" type="Request-Response" outputName="getFolderResponse" inputName="getFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="56b5cd59-9c3b-4f65-a844-058c52795ba5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getFolder>\r
@@ -3804,7 +3804,7 @@
          <folderId>?</folderId>\r
       </ws:getFolder>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getFolder"/></con:call></con:operation><con:operation id="c4c61c7e-8b3e-4f03-8a6d-76d33e8b079e" isOneWay="false" action="" name="getGrantedGroups" bindingOperationName="getGrantedGroups" type="Request-Response" outputName="getGrantedGroupsResponse" inputName="getGrantedGroups" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="61beae6f-9fdd-4030-bd22-5b4864808b79" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getFolder"/></con:call></con:operation><con:operation id="c4c61c7e-8b3e-4f03-8a6d-76d33e8b079e" isOneWay="false" action="" name="getGrantedGroups" bindingOperationName="getGrantedGroups" type="Request-Response" outputName="getGrantedGroupsResponse" inputName="getGrantedGroups" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="61beae6f-9fdd-4030-bd22-5b4864808b79" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getGrantedGroups>\r
@@ -3813,7 +3813,7 @@
          <folderId>?</folderId>\r
       </ws:getGrantedGroups>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getGrantedGroups"/></con:call></con:operation><con:operation id="52941082-5ff7-43b5-ae94-81ac637e95f4" isOneWay="false" action="" name="getGrantedUsers" bindingOperationName="getGrantedUsers" type="Request-Response" outputName="getGrantedUsersResponse" inputName="getGrantedUsers" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c80c08b9-99a3-4faf-81f2-94be8d793d88" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getGrantedGroups"/></con:call></con:operation><con:operation id="52941082-5ff7-43b5-ae94-81ac637e95f4" isOneWay="false" action="" name="getGrantedUsers" bindingOperationName="getGrantedUsers" type="Request-Response" outputName="getGrantedUsersResponse" inputName="getGrantedUsers" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c80c08b9-99a3-4faf-81f2-94be8d793d88" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getGrantedUsers>\r
@@ -3822,7 +3822,7 @@
          <folderId>?</folderId>\r
       </ws:getGrantedUsers>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getGrantedUsers"/></con:call></con:operation><con:operation id="5b9cd819-f9d7-40c1-a501-ba1ff38fc239" isOneWay="false" action="" name="getPath" bindingOperationName="getPath" type="Request-Response" outputName="getPathResponse" inputName="getPath" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f01b82d-f7c2-4bf5-9d31-2abfe195ce0f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getGrantedUsers"/></con:call></con:operation><con:operation id="5b9cd819-f9d7-40c1-a501-ba1ff38fc239" isOneWay="false" action="" name="getPath" bindingOperationName="getPath" type="Request-Response" outputName="getPathResponse" inputName="getPath" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0f01b82d-f7c2-4bf5-9d31-2abfe195ce0f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getPath>\r
@@ -3831,7 +3831,7 @@
          <folderId>?</folderId>\r
       </ws:getPath>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getPath"/></con:call></con:operation><con:operation id="c2653bc4-b15f-4191-af22-2249003f6aad" isOneWay="false" action="" name="getRootFolder" bindingOperationName="getRootFolder" type="Request-Response" outputName="getRootFolderResponse" inputName="getRootFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b359be9-b62e-454f-adad-d0aaff832661" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getPath"/></con:call></con:operation><con:operation id="c2653bc4-b15f-4191-af22-2249003f6aad" isOneWay="false" action="" name="getRootFolder" bindingOperationName="getRootFolder" type="Request-Response" outputName="getRootFolderResponse" inputName="getRootFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9b359be9-b62e-454f-adad-d0aaff832661" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:getRootFolder>\r
@@ -3839,7 +3839,7 @@
          <sid>?</sid>\r
       </ws:getRootFolder>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getRootFolder"/></con:call></con:operation><con:operation id="2c65da42-ba75-4d31-ab6e-683894a1fc0f" isOneWay="false" action="" name="grantGroup" bindingOperationName="grantGroup" type="Request-Response" outputName="grantGroupResponse" inputName="grantGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="364edfac-9d0b-4109-9060-535e743d5198" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/getRootFolder"/></con:call></con:operation><con:operation id="2c65da42-ba75-4d31-ab6e-683894a1fc0f" isOneWay="false" action="" name="grantGroup" bindingOperationName="grantGroup" type="Request-Response" outputName="grantGroupResponse" inputName="grantGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="364edfac-9d0b-4109-9060-535e743d5198" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:grantGroup>\r
@@ -3851,7 +3851,7 @@
          <recursive>?</recursive>\r
       </ws:grantGroup>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/grantGroup"/></con:call></con:operation><con:operation id="540c88cf-689c-4943-8c05-272780900204" isOneWay="false" action="" name="grantUser" bindingOperationName="grantUser" type="Request-Response" outputName="grantUserResponse" inputName="grantUser" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="86fb15e7-ab9a-4e30-8ed7-01e638740ae4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/grantGroup"/></con:call></con:operation><con:operation id="540c88cf-689c-4943-8c05-272780900204" isOneWay="false" action="" name="grantUser" bindingOperationName="grantUser" type="Request-Response" outputName="grantUserResponse" inputName="grantUser" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="86fb15e7-ab9a-4e30-8ed7-01e638740ae4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:grantUser>\r
@@ -3863,7 +3863,7 @@
          <recursive>?</recursive>\r
       </ws:grantUser>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/grantUser"/></con:call></con:operation><con:operation id="c3da867b-ea69-44ca-bcaa-f4b7ff83c92b" isOneWay="false" action="" name="isGranted" bindingOperationName="isGranted" type="Request-Response" outputName="isGrantedResponse" inputName="isGranted" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0af924fa-0202-4136-921d-fb9f75bf6fb7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/grantUser"/></con:call></con:operation><con:operation id="c3da867b-ea69-44ca-bcaa-f4b7ff83c92b" isOneWay="false" action="" name="isGranted" bindingOperationName="isGranted" type="Request-Response" outputName="isGrantedResponse" inputName="isGranted" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0af924fa-0202-4136-921d-fb9f75bf6fb7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:isGranted>\r
@@ -3873,7 +3873,7 @@
          <permission>?</permission>\r
       </ws:isGranted>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isGranted"/></con:call></con:operation><con:operation id="425f418e-a963-4e03-b732-fe72adb030b2" isOneWay="false" action="" name="isReadable" bindingOperationName="isReadable" type="Request-Response" outputName="isReadableResponse" inputName="isReadable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fa4b31d2-ea3f-4269-98fd-cc03e993aff6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isGranted"/></con:call></con:operation><con:operation id="425f418e-a963-4e03-b732-fe72adb030b2" isOneWay="false" action="" name="isReadable" bindingOperationName="isReadable" type="Request-Response" outputName="isReadableResponse" inputName="isReadable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fa4b31d2-ea3f-4269-98fd-cc03e993aff6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:isReadable>\r
@@ -3882,7 +3882,7 @@
          <folderId>?</folderId>\r
       </ws:isReadable>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isReadable"/></con:call></con:operation><con:operation id="bef949bf-016a-44d0-98e3-03d946423e75" isOneWay="false" action="" name="isWriteable" bindingOperationName="isWriteable" type="Request-Response" outputName="isWriteableResponse" inputName="isWriteable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="81e28052-ce83-4b4c-8576-7d82b1df9773" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isReadable"/></con:call></con:operation><con:operation id="bef949bf-016a-44d0-98e3-03d946423e75" isOneWay="false" action="" name="isWriteable" bindingOperationName="isWriteable" type="Request-Response" outputName="isWriteableResponse" inputName="isWriteable" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="81e28052-ce83-4b4c-8576-7d82b1df9773" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:isWriteable>\r
@@ -3891,7 +3891,7 @@
          <folderId>?</folderId>\r
       </ws:isWriteable>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isWriteable"/></con:call></con:operation><con:operation id="b5246c98-836f-4dd6-bafe-a241811447a7" isOneWay="false" action="" name="listChildren" bindingOperationName="listChildren" type="Request-Response" outputName="listChildrenResponse" inputName="listChildren" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bfaaeeef-16e2-4de9-b561-2d7370a23db7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/isWriteable"/></con:call></con:operation><con:operation id="b5246c98-836f-4dd6-bafe-a241811447a7" isOneWay="false" action="" name="listChildren" bindingOperationName="listChildren" type="Request-Response" outputName="listChildrenResponse" inputName="listChildren" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bfaaeeef-16e2-4de9-b561-2d7370a23db7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:listChildren>\r
@@ -3900,7 +3900,7 @@
          <folderId>?</folderId>\r
       </ws:listChildren>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/listChildren"/></con:call></con:operation><con:operation id="cbee896c-1def-411d-9569-ef1e02771ed5" isOneWay="false" action="" name="listWorkspaces" bindingOperationName="listWorkspaces" type="Request-Response" outputName="listWorkspacesResponse" inputName="listWorkspaces" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2b80bdcb-575b-4238-84b8-c7ba079ff1b3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/listChildren"/></con:call></con:operation><con:operation id="cbee896c-1def-411d-9569-ef1e02771ed5" isOneWay="false" action="" name="listWorkspaces" bindingOperationName="listWorkspaces" type="Request-Response" outputName="listWorkspacesResponse" inputName="listWorkspaces" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2b80bdcb-575b-4238-84b8-c7ba079ff1b3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:listWorkspaces>\r
@@ -3908,7 +3908,7 @@
          <sid>?</sid>\r
       </ws:listWorkspaces>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/listWorkspaces"/></con:call></con:operation><con:operation id="d1155f25-7c8e-460f-8cfa-1042e3ec154b" isOneWay="false" action="" name="move" bindingOperationName="move" type="Request-Response" outputName="moveResponse" inputName="move" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2fd929e1-7cd9-455a-b6b5-2e9fe16a41e2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/listWorkspaces"/></con:call></con:operation><con:operation id="d1155f25-7c8e-460f-8cfa-1042e3ec154b" isOneWay="false" action="" name="move" bindingOperationName="move" type="Request-Response" outputName="moveResponse" inputName="move" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2fd929e1-7cd9-455a-b6b5-2e9fe16a41e2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:move>\r
@@ -3918,7 +3918,7 @@
          <parentId>?</parentId>\r
       </ws:move>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/move"/></con:call></con:operation><con:operation id="20ae1abf-e3fd-4a69-80cf-b9dbd5b708ac" isOneWay="false" action="" name="rename" bindingOperationName="rename" type="Request-Response" outputName="renameResponse" inputName="rename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e657228-6d28-4fd8-b7ce-0ead62756f7e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/move"/></con:call></con:operation><con:operation id="20ae1abf-e3fd-4a69-80cf-b9dbd5b708ac" isOneWay="false" action="" name="rename" bindingOperationName="rename" type="Request-Response" outputName="renameResponse" inputName="rename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5e657228-6d28-4fd8-b7ce-0ead62756f7e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:rename>\r
@@ -3929,7 +3929,7 @@
          <name>?</name>\r
       </ws:rename>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/rename"/></con:call></con:operation><con:operation id="68855052-d250-43d4-b0a1-c9795f37b113" isOneWay="false" action="" name="update" bindingOperationName="update" type="Request-Response" outputName="updateResponse" inputName="update" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="520f002b-2fda-493a-b88b-46a4494eaee2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/rename"/></con:call></con:operation><con:operation id="68855052-d250-43d4-b0a1-c9795f37b113" isOneWay="false" action="" name="update" bindingOperationName="update" type="Request-Response" outputName="updateResponse" inputName="update" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="520f002b-2fda-493a-b88b-46a4494eaee2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:update>\r
@@ -3995,4 +3995,421 @@
          </folder>\r
       </ws:update>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/update"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/update"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="5bcbfa0d-a029-4387-8739-87c184f63d09" wsaVersion="NONE" name="SoapSearchServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapSearchServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/formation/Desktop/PROJET2/LogicalDoc_wsdl_Search.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/formation/Desktop/PROJET2/LogicalDoc_wsdl_Search.xml"><con:part><con:url>file:/C:/Users/formation/Desktop/PROJET2/LogicalDoc_wsdl_Search.xml</con:url><con:content><![CDATA[<wsdl:definitions name="SoapSearchServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:import location="http://localhost:8093/logicaldoc/services/Search?wsdl=Search.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
+  <wsdl:binding name="SoapSearchServiceServiceSoapBinding" type="ns1:Search">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findByFilename">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findByFilename">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findByFilenameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="find">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findFolders">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findFolders">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findFoldersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapSearchServiceService">
+    <wsdl:port binding="tns:SoapSearchServiceServiceSoapBinding" name="SoapSearchServicePort">
+      <soap:address location="http://localhost:8093/logicaldoc/services/Search"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8093/logicaldoc/services/Search?wsdl=Search.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Search" targetNamespace="http://ws.logicaldoc.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.logicaldoc.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.logicaldoc.com">
+      <xs:element name="attribute" type="tns:WSAttribute"/>
+      <xs:element name="document" type="tns:WSDocument"/>
+      <xs:element name="find" type="tns:find"/>
+      <xs:element name="findByFilename" type="tns:findByFilename"/>
+      <xs:element name="findByFilenameResponse" type="tns:findByFilenameResponse"/>
+      <xs:element name="findFolders" type="tns:findFolders"/>
+      <xs:element name="findFoldersResponse" type="tns:findFoldersResponse"/>
+      <xs:element name="findResponse" type="tns:findResponse"/>
+      <xs:element name="folder" type="tns:WSFolder"/>
+      <xs:element name="searchoptions" type="tns:WSSearchOptions"/>
+      <xs:complexType name="findByFilename">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="filename" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findByFilenameResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="document" type="tns:WSDocument"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSDocument">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="tns:WSAttribute"/>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element name="creatorId" type="xs:long"/>
+          <xs:element minOccurs="0" name="customId" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element minOccurs="0" name="deleteUserId" type="xs:long"/>
+          <xs:element minOccurs="0" name="digest" type="xs:string"/>
+          <xs:element minOccurs="0" name="docRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="docRefType" type="xs:string"/>
+          <xs:element minOccurs="0" name="exportId" type="xs:long"/>
+          <xs:element minOccurs="0" name="exportName" type="xs:string"/>
+          <xs:element name="exportStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+          <xs:element name="fileSize" type="xs:long"/>
+          <xs:element minOccurs="0" name="fileVersion" type="xs:string"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="formId" type="xs:long"/>
+          <xs:element minOccurs="0" name="icon" type="xs:string"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="immutable" type="xs:int"/>
+          <xs:element name="indexed" type="xs:int"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="lockUserId" type="xs:long"/>
+          <xs:element name="nature" type="xs:int"/>
+          <xs:element name="pages" type="xs:int"/>
+          <xs:element minOccurs="0" name="passwordProtected" type="xs:int"/>
+          <xs:element name="published" type="xs:int"/>
+          <xs:element minOccurs="0" name="publisher" type="xs:string"/>
+          <xs:element name="publisherId" type="xs:long"/>
+          <xs:element minOccurs="0" name="rating" type="xs:int"/>
+          <xs:element minOccurs="0" name="score" type="xs:int"/>
+          <xs:element name="signed" type="xs:int"/>
+          <xs:element name="stamped" type="xs:int"/>
+          <xs:element minOccurs="0" name="startPublishing" type="xs:string"/>
+          <xs:element name="status" type="xs:int"/>
+          <xs:element minOccurs="0" name="stopPublishing" type="xs:string"/>
+          <xs:element minOccurs="0" name="summary" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+          <xs:element minOccurs="0" name="version" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatus" type="xs:string"/>
+          <xs:element minOccurs="0" name="workflowStatusDisplay" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSAttribute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element name="editor" type="xs:int"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element minOccurs="0" name="intValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+          <xs:element name="mandatory" type="xs:int"/>
+          <xs:element name="multiple" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="parent" type="xs:string"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="setId" type="xs:long"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="stringValues" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="find">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="options" type="tns:WSSearchOptions"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSSearchOptions">
+        <xs:sequence>
+          <xs:element name="caseSensitive" type="xs:int"/>
+          <xs:element minOccurs="0" name="creationFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="creationTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateFrom" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateTo" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="expression" type="xs:string"/>
+          <xs:element minOccurs="0" name="expressionLanguage" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="fields" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="filterIds" nillable="true" type="xs:long"/>
+          <xs:element minOccurs="0" name="folderId" type="xs:long"/>
+          <xs:element minOccurs="0" name="format" type="xs:string"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element name="maxHits" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="retrieveAliases" type="xs:int"/>
+          <xs:element name="searchInSubPath" type="xs:int"/>
+          <xs:element minOccurs="0" name="sizeMax" type="xs:long"/>
+          <xs:element minOccurs="0" name="sizeMin" type="xs:long"/>
+          <xs:element minOccurs="0" name="template" type="xs:long"/>
+          <xs:element minOccurs="0" name="topOperator" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchResult" type="tns:WSSearchResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSSearchResult">
+        <xs:sequence>
+          <xs:element name="estimatedHitsNumber" type="xs:long"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="hits" nillable="true" type="tns:WSDocument"/>
+          <xs:element name="moreHits" type="xs:int"/>
+          <xs:element name="time" type="xs:long"/>
+          <xs:element name="totalHits" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findFolders">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findFoldersResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="folder" type="tns:WSFolder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSFolder">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attributes" nillable="true" type="tns:WSAttribute"/>
+          <xs:element minOccurs="0" name="creation" type="xs:string"/>
+          <xs:element minOccurs="0" name="creator" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="foldRef" type="xs:long"/>
+          <xs:element name="hidden" type="xs:int"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="parentId" type="xs:long"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element minOccurs="0" name="securityRef" type="xs:long"/>
+          <xs:element minOccurs="0" name="storage" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tags" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="templateId" type="xs:long"/>
+          <xs:element name="templateLocked" type="xs:int"/>
+          <xs:element name="type" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="findByFilenameResponse">
+    <wsdl:part element="ns1:findByFilenameResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="find">
+    <wsdl:part element="ns1:find" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFolders">
+    <wsdl:part element="ns1:findFolders" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findByFilename">
+    <wsdl:part element="ns1:findByFilename" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findResponse">
+    <wsdl:part element="ns1:findResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="ns1:Exception" name="Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFoldersResponse">
+    <wsdl:part element="ns1:findFoldersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Search">
+    <wsdl:operation name="findByFilename">
+      <wsdl:input message="ns1:findByFilename" name="findByFilename"></wsdl:input>
+      <wsdl:output message="ns1:findByFilenameResponse" name="findByFilenameResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="find">
+      <wsdl:input message="ns1:find" name="find"></wsdl:input>
+      <wsdl:output message="ns1:findResponse" name="findResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findFolders">
+      <wsdl:input message="ns1:findFolders" name="findFolders"></wsdl:input>
+      <wsdl:output message="ns1:findFoldersResponse" name="findFoldersResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint></con:endpoints><con:operation id="9fe11ff8-71a6-4f45-8a68-c6fe11cf86d8" isOneWay="false" action="" name="find" bindingOperationName="find" type="Request-Response" outputName="findResponse" inputName="find" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e43a9e48-cc4a-4bcd-91b1-456ab7eb0116" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:find>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <options>\r
+            <caseSensitive>?</caseSensitive>\r
+            <!--Optional:-->\r
+            <creationFrom>?</creationFrom>\r
+            <!--Optional:-->\r
+            <creationTo>?</creationTo>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <description>?</description>\r
+            <!--Optional:-->\r
+            <expression>?</expression>\r
+            <!--Optional:-->\r
+            <expressionLanguage>?</expressionLanguage>\r
+            <!--Zero or more repetitions:-->\r
+            <fields>?</fields>\r
+            <!--Zero or more repetitions:-->\r
+            <filterIds>?</filterIds>\r
+            <!--Optional:-->\r
+            <folderId>?</folderId>\r
+            <!--Optional:-->\r
+            <format>?</format>\r
+            <!--Optional:-->\r
+            <language>?</language>\r
+            <maxHits>?</maxHits>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <retrieveAliases>?</retrieveAliases>\r
+            <searchInSubPath>?</searchInSubPath>\r
+            <!--Optional:-->\r
+            <sizeMax>?</sizeMax>\r
+            <!--Optional:-->\r
+            <sizeMin>?</sizeMin>\r
+            <!--Optional:-->\r
+            <template>?</template>\r
+            <!--Optional:-->\r
+            <topOperator>?</topOperator>\r
+            <type>?</type>\r
+         </options>\r
+      </ws:find>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/find"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="53662ed2-628b-4808-ba75-12d107559386" isOneWay="false" action="" name="findByFilename" bindingOperationName="findByFilename" type="Request-Response" outputName="findByFilenameResponse" inputName="findByFilename" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4968efe7-5b69-4fa7-ac48-ff32327e9a26" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:findByFilename>\r
+         <!--Optional:-->\r
+         <sid>7b0ee6b6-9e73-43d0-967e-7c3825cf3af3</sid>\r
+         <!--Optional:-->\r
+         <filename>TEST_LogicalDoc.txt</filename>\r
+      </ws:findByFilename>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>admin</con:username><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findByFilename"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6e7785a2-1707-4834-9750-35b17bedd108" isOneWay="false" action="" name="findFolders" bindingOperationName="findFolders" type="Request-Response" outputName="findFoldersResponse" inputName="findFolders" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="031e2bdd-9d21-46bc-80de-cbfe59d17655" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:findFolders>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <name>?</name>\r
+      </ws:findFolders>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findFolders"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="57abfb16-cddb-4876-8d3d-b722f86c6bfe" name="SoapSearchServiceServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="85869d94-5132-43d0-8438-4d7d5419fcfe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SoapSearchServiceServiceSoapBinding TestSuite" searchProperties="true"><con:settings/><con:testStep type="request" id="9ffa1625-91f3-46cc-b93e-bbab3b5f5eaf" name="Login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a569e858-5712-4046-9290-a7ecba821c0d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:login>\r
+         <!--Optional:-->\r
+         <username>admin</username>\r
+         <!--Optional:-->\r
+         <password>admin</password>\r
+      </ws:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="748b0d75-f0b2-4735-8f4c-9adb7ae84982" name="SOAP Response"/><con:assertion type="Schema Compliance" id="957e9a6f-6ee4-42f5-bb60-014f0fe5c8a2" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="1b29bbfa-3852-42e4-8d7e-f838e1517026" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Auth/login"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer Sid" id="8373b133-5467-4e15-b95b-65c7608aac88"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sid</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login</con:sourceStep><con:targetType>sid</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" id="9e21ec50-9be3-49fb-b4f1-4cebf7d89f7b" name="findByFilename"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>findByFilename</con:operation><con:request name="findByFilename" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6783c23d-3d24-4c6a-91ad-4331e3a4e621"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:findByFilename>\r
+         <!--Optional:-->\r
+         <sid>${Login#Response#//return}</sid>\r
+         <!--Optional:-->\r
+         <filename>%</filename>\r
+      </ws:findByFilename>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="df827e13-7290-44b7-bace-9de0ef81c0e4" name="SOAP Response"/><con:assertion type="Schema Compliance" id="fb396a87-419a-4222-8af3-98b831e2baef" name="Schema Compliance"><con:configuration><definition/></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findByFilename"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="5491cf1d-bfb4-44c0-ae02-768bc20336a2"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sid</con:name><con:value><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:loginResponse xmlns:ns2="http://ws.logicaldoc.com">
+         <return>8d98c2ce-177f-4099-b3f5-39d46b6b9101</return>
+      </ns2:loginResponse>
+   </soap:Body>
+</soap:Envelope>]]></con:value></con:property><con:property><con:name>name</con:name><con:value>%test%</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="Logout" id="7c8b6322-8520-4552-9ac5-2b3375fdc8dd"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="Logout" id="63b56a3a-07e7-4ee1-abf6-8b6d539ee8e2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:logout/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5359a13f-a92f-43bb-826b-8bc12407f9ba"/><con:assertion type="Schema Compliance" id="b9be52bc-a4e2-43a3-a138-38c6a8d08bc8"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="039b8368-b0ad-4246-b53d-dab0b6c59263"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8ebc2a96-3cab-4a36-a1f7-22c298ec8f80" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="findByDate TestSuite" searchProperties="true"><con:settings/><con:testStep type="request" name="Login" id="31df9e27-a1ce-469a-9b51-01f01ca97926"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" id="e70854f9-9b0e-4514-b77d-80d6cd21a585"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:login/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e2fa396-e84c-4f61-80fc-fadf1c60250b"/><con:assertion type="Schema Compliance" id="58ce3510-b48c-43f9-982f-f6200af16d5e"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="4154b581-1cb6-4c96-acb0-c72ea7d01cc2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="4d75536a-f31e-4477-b3c7-718a1c61b7b1" name="findByDate"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>find</con:operation><con:request name="findByDate" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b30d0b15-0fea-42aa-a9f5-c6a80fba9a4a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:find>\r
+         <!--Optional:-->\r
+         <sid>3aec3924-0aaf-46c8-a427-00cded64762e</sid>\r
+         <!--Optional:-->\r
+         <options>\r
+            <creationFrom>%</creationFrom>\r
+            <creationTo>%</creationTo>\r
+            <!--Optional:-->\r
+            <dateFrom>%</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>%</dateTo>\r
+            <!--Optional:-->\r
+            <description>%</description>\r
+            <!--Optional:-->\r
+            <expression>%</expression>\r
+            <!--Optional:-->\r
+            <expressionLanguage>%</expressionLanguage>\r
+            <!--Zero or more repetitions:-->\r
+            <fields></fields>\r
+            <!--Zero or more repetitions:-->\r
+            <filterIds></filterIds>\r
+            <!--Optional:-->\r
+            <folderId></folderId>\r
+            <!--Optional:-->\r
+            <format></format>\r
+            <!--Optional:-->\r
+            <language></language>\r
+            <maxHits></maxHits>\r
+            <!--Optional:-->\r
+            <name></name>\r
+            <retrieveAliases></retrieveAliases>\r
+            <searchInSubPath></searchInSubPath>\r
+            <!--Optional:-->\r
+            <sizeMax></sizeMax>\r
+            <!--Optional:-->\r
+            <sizeMin></sizeMin>\r
+            <!--Optional:-->\r
+            <template></template>\r
+            <!--Optional:-->\r
+            <topOperator></topOperator>\r
+            <type></type>\r
+         </options>\r
+      </ws:find>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b4652dfd-73bc-4762-b289-3a982ac4c847" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/find"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
