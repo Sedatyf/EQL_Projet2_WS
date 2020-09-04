@@ -26,17 +26,17 @@ import java.util.List;
  * Unit test for simple App.
  */
 @RunWith(Parameterized.class)
-public class RunnerSoapUI_parameteredTest {
+public class RunnerSoapUI_libreplanTest {
 	private String testCaseName;
 
-	public RunnerSoapUI_parameteredTest(String testCaseName) {
+	public RunnerSoapUI_libreplanTest(String testCaseName) {
 		this.testCaseName = testCaseName;
 	}
 
 	@Parameters(name = "{0}")
 	public static Collection<String[]> getTestCases() throws XmlException, IOException, SoapUIException {
 		final ArrayList<String[]> testCases = new ArrayList<String[]>();
-		WsdlProject project = new WsdlProject("src/test/resources/NOAA2-soapui-project.xml");
+		WsdlProject project = new WsdlProject("src/test/resources/LibrePlanWS-soapui-project.xml");
 		List<TestSuite> testSuites = project.getTestSuiteList();
 		for (TestSuite suite : testSuites) {
 			List<TestCase> lTestCases = suite.getTestCaseList();
@@ -59,7 +59,7 @@ public class RunnerSoapUI_parameteredTest {
 
 	public static boolean runSoapUITestCase(String testCase) throws XmlException, IOException, SoapUIException {
 		TestRunner.Status exitValue = TestRunner.Status.INITIALIZED;
-		WsdlProject soapuiProject = new WsdlProject("src/test/resources/NOAA2-soapui-project.xml");
+		WsdlProject soapuiProject = new WsdlProject("src/test/resources/LibrePlanWS-soapui-project.xml");
 		List<TestSuite> testSuites = soapuiProject.getTestSuiteList();
 		if (testSuites.size()==0) {
 			System.err.println("[ERROR] runner soapUI, Aucune suite de test dans le projet ");
