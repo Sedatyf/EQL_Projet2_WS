@@ -1,5 +1,6 @@
 *.log
 /*.log
 *.txt
+!testprops.txt
 target/
 **/logs
