@@ -3670,7 +3670,7 @@
          <inheritSecurity>?</inheritSecurity>\r
       </ws:copy>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/copy"/></con:call></con:operation><con:operation id="02b37538-e05d-468e-a531-13503b8d35fd" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="02a3df30-e84b-4eeb-9376-4e8256e170aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/copy"/></con:call></con:operation><con:operation id="02b37538-e05d-468e-a531-13503b8d35fd" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="02a3df30-e84b-4eeb-9376-4e8256e170aa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:create>\r
@@ -3736,7 +3736,7 @@
          </folder>\r
       </ws:create>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/create"/></con:call></con:operation><con:operation id="8469fc7c-60e7-409f-bb78-e54c0f5d9789" isOneWay="false" action="" name="createAlias" bindingOperationName="createAlias" type="Request-Response" outputName="createAliasResponse" inputName="createAlias" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73f76ff9-0f45-46a0-8de0-a7da357cb126" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/create"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8469fc7c-60e7-409f-bb78-e54c0f5d9789" isOneWay="false" action="" name="createAlias" bindingOperationName="createAlias" type="Request-Response" outputName="createAliasResponse" inputName="createAlias" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73f76ff9-0f45-46a0-8de0-a7da357cb126" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:createAlias>\r
@@ -4329,7 +4329,365 @@
          <name>?</name>\r
       </ws:findFolders>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findFolders"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="57abfb16-cddb-4876-8d3d-b722f86c6bfe" name="LogicalDoc TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0f4a3eb5-c7da-435d-a5e7-c35bae3cf763" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login" searchProperties="true"><con:settings/><con:testStep type="request" name="Login" id="23d15194-f065-4001-bb8d-9a0d0fbfe6b9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" id="da5fc32e-7507-480b-879e-a4de0c2a504b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Search/findFolders"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="6ddefdb0-5e4d-4b79-ac8f-45fe53b22a7e" wsaVersion="NONE" name="SoapBookmarkServiceServiceSoapBinding" type="wsdl" bindingName="{http://endpoint.soap.webservice.logicaldoc.com/}SoapBookmarkServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8093/logicaldoc/services/Bookmark?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8093/logicaldoc/services/Bookmark?wsdl"><con:part><con:url>http://localhost:8093/logicaldoc/services/Bookmark?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SoapBookmarkServiceService" targetNamespace="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://endpoint.soap.webservice.logicaldoc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:import location="http://localhost:8093/logicaldoc/services/Bookmark?wsdl=Bookmark.wsdl" namespace="http://ws.logicaldoc.com"></wsdl:import>
+  <wsdl:binding name="SoapBookmarkServiceServiceSoapBinding" type="ns1:Bookmark">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="unbookmarkFolder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unbookmarkFolder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unbookmarkFolderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveBookmark">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveBookmark">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveBookmarkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="bookmarkDocument">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="bookmarkDocument">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="bookmarkDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBookmark">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteBookmark">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteBookmarkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unbookmarkDocument">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unbookmarkDocument">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unbookmarkDocumentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBookmarks">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBookmarks">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBookmarksResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="bookmarkFolder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="bookmarkFolder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="bookmarkFolderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapBookmarkServiceService">
+    <wsdl:port binding="tns:SoapBookmarkServiceServiceSoapBinding" name="SoapBookmarkServicePort">
+      <soap:address location="http://localhost:8093/logicaldoc/services/Bookmark"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:8093/logicaldoc/services/Bookmark?wsdl=Bookmark.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Bookmark" targetNamespace="http://ws.logicaldoc.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://ws.logicaldoc.com">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.logicaldoc.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.logicaldoc.com">
+      <xs:element name="bookmarkDocument" type="tns:bookmarkDocument"/>
+      <xs:element name="bookmarkDocumentResponse" type="tns:bookmarkDocumentResponse"/>
+      <xs:element name="bookmarkFolder" type="tns:bookmarkFolder"/>
+      <xs:element name="bookmarkFolderResponse" type="tns:bookmarkFolderResponse"/>
+      <xs:element name="deleteBookmark" type="tns:deleteBookmark"/>
+      <xs:element name="deleteBookmarkResponse" type="tns:deleteBookmarkResponse"/>
+      <xs:element name="getBookmarks" type="tns:getBookmarks"/>
+      <xs:element name="getBookmarksResponse" type="tns:getBookmarksResponse"/>
+      <xs:element name="saveBookmark" type="tns:saveBookmark"/>
+      <xs:element name="saveBookmarkResponse" type="tns:saveBookmarkResponse"/>
+      <xs:element name="unbookmarkDocument" type="tns:unbookmarkDocument"/>
+      <xs:element name="unbookmarkDocumentResponse" type="tns:unbookmarkDocumentResponse"/>
+      <xs:element name="unbookmarkFolder" type="tns:unbookmarkFolder"/>
+      <xs:element name="unbookmarkFolderResponse" type="tns:unbookmarkFolderResponse"/>
+      <xs:complexType name="unbookmarkFolder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element name="folderId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="unbookmarkFolderResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="saveBookmark">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element minOccurs="0" name="bookmark" type="tns:WSBookmark"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSBookmark">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="fileType" type="xs:string"/>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="position" type="xs:int"/>
+          <xs:element name="targetId" type="xs:long"/>
+          <xs:element minOccurs="0" name="title" type="xs:string"/>
+          <xs:element name="type" type="xs:int"/>
+          <xs:element name="userId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="saveBookmarkResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bookmark" type="tns:WSBookmark"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bookmarkDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element name="docId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bookmarkDocumentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bookmark" type="tns:WSBookmark"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteBookmark">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element name="bookmarkId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteBookmarkResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="unbookmarkDocument">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element name="docId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="unbookmarkDocumentResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getBookmarks">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBookmarksResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="bookmark" type="tns:WSBookmark"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bookmarkFolder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sid" type="xs:string"/>
+          <xs:element name="folderId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="bookmarkFolderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bookmark" type="tns:WSBookmark"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="unbookmarkFolder">
+    <wsdl:part element="ns1:unbookmarkFolder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveBookmark">
+    <wsdl:part element="ns1:saveBookmark" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unbookmarkDocumentResponse">
+    <wsdl:part element="ns1:unbookmarkDocumentResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveBookmarkResponse">
+    <wsdl:part element="ns1:saveBookmarkResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookmarkDocument">
+    <wsdl:part element="ns1:bookmarkDocument" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteBookmark">
+    <wsdl:part element="ns1:deleteBookmark" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookmarkDocumentResponse">
+    <wsdl:part element="ns1:bookmarkDocumentResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteBookmarkResponse">
+    <wsdl:part element="ns1:deleteBookmarkResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unbookmarkDocument">
+    <wsdl:part element="ns1:unbookmarkDocument" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookmarkFolderResponse">
+    <wsdl:part element="ns1:bookmarkFolderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBookmarksResponse">
+    <wsdl:part element="ns1:getBookmarksResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unbookmarkFolderResponse">
+    <wsdl:part element="ns1:unbookmarkFolderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="ns1:Exception" name="Exception"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookmarkFolder">
+    <wsdl:part element="ns1:bookmarkFolder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBookmarks">
+    <wsdl:part element="ns1:getBookmarks" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Bookmark">
+    <wsdl:operation name="unbookmarkFolder">
+      <wsdl:input message="ns1:unbookmarkFolder" name="unbookmarkFolder"></wsdl:input>
+      <wsdl:output message="ns1:unbookmarkFolderResponse" name="unbookmarkFolderResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="saveBookmark">
+      <wsdl:input message="ns1:saveBookmark" name="saveBookmark"></wsdl:input>
+      <wsdl:output message="ns1:saveBookmarkResponse" name="saveBookmarkResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="bookmarkDocument">
+      <wsdl:input message="ns1:bookmarkDocument" name="bookmarkDocument"></wsdl:input>
+      <wsdl:output message="ns1:bookmarkDocumentResponse" name="bookmarkDocumentResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBookmark">
+      <wsdl:input message="ns1:deleteBookmark" name="deleteBookmark"></wsdl:input>
+      <wsdl:output message="ns1:deleteBookmarkResponse" name="deleteBookmarkResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="unbookmarkDocument">
+      <wsdl:input message="ns1:unbookmarkDocument" name="unbookmarkDocument"></wsdl:input>
+      <wsdl:output message="ns1:unbookmarkDocumentResponse" name="unbookmarkDocumentResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBookmarks">
+      <wsdl:input message="ns1:getBookmarks" name="getBookmarks"></wsdl:input>
+      <wsdl:output message="ns1:getBookmarksResponse" name="getBookmarksResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="bookmarkFolder">
+      <wsdl:input message="ns1:bookmarkFolder" name="bookmarkFolder"></wsdl:input>
+      <wsdl:output message="ns1:bookmarkFolderResponse" name="bookmarkFolderResponse"></wsdl:output>
+      <wsdl:fault message="ns1:Exception" name="Exception"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint></con:endpoints><con:operation id="6847cf62-a3e2-4ae8-9b7f-8f5c8f29571b" isOneWay="false" action="" name="bookmarkDocument" bindingOperationName="bookmarkDocument" type="Request-Response" outputName="bookmarkDocumentResponse" inputName="bookmarkDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e977a873-e3b4-41a6-9271-c6a70c429522" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:bookmarkDocument>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <docId>?</docId>\r
+      </ws:bookmarkDocument>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/bookmarkDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="430c931a-dd5a-4e3f-937a-6f3097230357" isOneWay="false" action="" name="bookmarkFolder" bindingOperationName="bookmarkFolder" type="Request-Response" outputName="bookmarkFolderResponse" inputName="bookmarkFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4eb1f3a7-1aba-435b-8a95-9104e452b1ae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:bookmarkFolder>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <folderId>?</folderId>\r
+      </ws:bookmarkFolder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/bookmarkFolder"/></con:call></con:operation><con:operation id="ca340a17-93fa-4ad1-9a62-7f7a40ee9150" isOneWay="false" action="" name="deleteBookmark" bindingOperationName="deleteBookmark" type="Request-Response" outputName="deleteBookmarkResponse" inputName="deleteBookmark" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e8671d70-3ee6-492d-a995-f89b202f6d7c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:deleteBookmark>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <bookmarkId>?</bookmarkId>\r
+      </ws:deleteBookmark>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/deleteBookmark"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a6334342-41fb-4193-987f-c04f17d586d4" isOneWay="false" action="" name="getBookmarks" bindingOperationName="getBookmarks" type="Request-Response" outputName="getBookmarksResponse" inputName="getBookmarks" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eee21f3d-44bb-4f16-88a6-36242352eeaa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getBookmarks>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+      </ws:getBookmarks>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/getBookmarks"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="e986a4cc-e8e2-4d1e-8b8e-5e07c69d0fa6" isOneWay="false" action="" name="saveBookmark" bindingOperationName="saveBookmark" type="Request-Response" outputName="saveBookmarkResponse" inputName="saveBookmark" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="27c394da-7af5-4c9b-a2ea-6e6fb7a9342f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:saveBookmark>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <!--Optional:-->\r
+         <bookmark>\r
+            <!--Optional:-->\r
+            <description>?</description>\r
+            <!--Optional:-->\r
+            <fileType>?</fileType>\r
+            <id>?</id>\r
+            <position>?</position>\r
+            <targetId>?</targetId>\r
+            <!--Optional:-->\r
+            <title>?</title>\r
+            <type>?</type>\r
+            <userId>?</userId>\r
+         </bookmark>\r
+      </ws:saveBookmark>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/saveBookmark"/></con:call></con:operation><con:operation id="3d5a2c3a-df77-44cc-b92a-ff085fcf46cd" isOneWay="false" action="" name="unbookmarkDocument" bindingOperationName="unbookmarkDocument" type="Request-Response" outputName="unbookmarkDocumentResponse" inputName="unbookmarkDocument" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="90e160c3-1d29-47d7-8591-7a991e800e3d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:unbookmarkDocument>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <docId>?</docId>\r
+      </ws:unbookmarkDocument>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/unbookmarkDocument"/></con:call></con:operation><con:operation id="36b60c28-6372-4f5c-a907-1b87bdb592fe" isOneWay="false" action="" name="unbookmarkFolder" bindingOperationName="unbookmarkFolder" type="Request-Response" outputName="unbookmarkFolderResponse" inputName="unbookmarkFolder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0e5e9bdc-def5-44da-b0a9-34e25e56c558" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:unbookmarkFolder>\r
+         <!--Optional:-->\r
+         <sid>?</sid>\r
+         <folderId>?</folderId>\r
+      </ws:unbookmarkFolder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/unbookmarkFolder"/></con:call></con:operation></con:interface><con:testSuite id="57abfb16-cddb-4876-8d3d-b722f86c6bfe" name="LogicalDoc TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0f4a3eb5-c7da-435d-a5e7-c35bae3cf763" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login" searchProperties="true"><con:settings/><con:testStep type="request" name="Login" id="23d15194-f065-4001-bb8d-9a0d0fbfe6b9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" id="da5fc32e-7507-480b-879e-a4de0c2a504b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">
    <soapenv:Header/>
    <soapenv:Body>
       <ws:login>
@@ -4470,4 +4828,56 @@
    <soapenv:Body>\r
       <ws:logout/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9976cdd9-9b95-46e6-bf67-c43bebe5d6f5"/><con:assertion type="Schema Compliance" id="af67b43b-c500-414c-b35a-3b0c50f01665"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="5c62a50e-ee0a-4967-81a1-4fa6ae7521ee"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>sid</con:name><con:value>5164f7e3-6640-438e-8fe5-2d8d477bcf58</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9976cdd9-9b95-46e6-bf67-c43bebe5d6f5"/><con:assertion type="Schema Compliance" id="af67b43b-c500-414c-b35a-3b0c50f01665"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="5c62a50e-ee0a-4967-81a1-4fa6ae7521ee"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="c6377824-01e2-4bd9-96e5-1ae8710d1f78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un-des repertoire.s" searchProperties="true"><con:settings/><con:testStep type="request" id="719c7a09-18b2-487f-905e-5e35d532a955" name="createFolder"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapFolderServiceServiceSoapBinding</con:interface><con:operation>createFolder</con:operation><con:request name="createFolder" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="cbe57ec2-1386-43c0-8f2c-218ff61c3ec4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Folder</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:createFolder>\r
+         <!--Optional:-->\r
+         <sid>${#TestSuite#sid}</sid>\r
+         <parentId>100</parentId>\r
+         <!--Optional:-->\r
+         <name>TestFolder2</name>\r
+      </ws:createFolder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="313122f1-d7ce-4ea8-b28b-26cb7e8bafd9" name="SOAP Response"/><con:assertion type="Schema Compliance" id="703d8ecf-f38e-4d00-aa2a-5987c6911fdd" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="637842f0-7582-4860-8ca7-26c8d227b2f6" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createFolder"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7a19b5f3-5edf-4948-b58c-c7b18c19394a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Poser un bookmark sur un document" searchProperties="true"><con:settings/><con:testStep type="request" id="69c7afe3-3dcf-466c-8cb4-a5d6cccb4003" name="Poser un bookmark sur un document"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapBookmarkServiceServiceSoapBinding</con:interface><con:operation>bookmarkDocument</con:operation><con:request name="Poser un bookmark sur un document" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="da20fec6-6ec5-487e-90f3-f997cfdc23bf"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:bookmarkDocument>\r
+         <!--Optional:-->\r
+         <sid>${#TestSuite#sid}</sid>\r
+         <docId>106</docId>\r
+      </ws:bookmarkDocument>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="717c92e8-e9d7-43e0-87c9-7627dce8daef" name="SOAP Response"/><con:assertion type="Schema Compliance" id="f016847f-4f2c-4d54-9059-5c07ea5a722c" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="05cad646-3191-46da-a086-6db4f1060c2d" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/bookmarkDocument"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="104b643b-acee-4e95-bb20-e0ceaf4468da" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Retirer un bookmark posé sur un doc -1 requete" searchProperties="true"><con:settings/><con:testStep type="request" id="489d3c8d-8759-489e-99d9-9915f4b1108b" name="delete a Bookmark from a document"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapBookmarkServiceServiceSoapBinding</con:interface><con:operation>deleteBookmark</con:operation><con:request name="delete a Bookmark from a document" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="89baa79c-c75c-45b4-94c0-8f6cffdf660c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:deleteBookmark>\r
+         <!--Optional:-->\r
+         <sid>${#TestSuite#sid}</sid>\r
+         <bookmarkId>?</bookmarkId>\r
+      </ws:deleteBookmark>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="a65cc32f-6e89-4777-b2a6-2e703bcf9906" name="SOAP Response"/><con:assertion type="Schema Compliance" id="f98aeb8f-d932-43b2-bf82-51615c600e9c" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="30b035bf-ad2f-4fac-af62-9bfba804ea88" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/deleteBookmark"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3435cd70-4e91-4f55-9e88-8fa00399f366" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Retirer un bookmark posé sur un doc - multi" searchProperties="true"><con:settings/><con:testStep type="request" id="e0604c6e-07bb-4301-a18d-8b7d00cf65d4" name="listDocuments - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapDocumentServiceServiceSoapBinding</con:interface><con:operation>listDocuments</con:operation><con:request name="listDocuments - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6e77a430-c132-4f8a-ad2b-388ceca1db96"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:listDocuments>\r
+         <!--Optional:-->\r
+         <sid>${#TestSuite#sid}</sid>\r
+         <folderId>101</folderId>\r
+         <!--Optional:-->\r
+         <fileName>?</fileName>\r
+      </ws:listDocuments>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4af32f47-7e3e-44ad-8fa0-9328c68b4898" name="SOAP Response"/><con:assertion type="Schema Compliance" id="9f0d967b-36c2-4514-a4e2-181d90da07c1" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="b912c0b5-220d-4a72-8491-a23cbe17a7e8" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/listDocuments"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="c41ead54-4105-43d6-b47c-4a4d14b0f12b" name="Récupérer tous les Bookmarks"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapBookmarkServiceServiceSoapBinding</con:interface><con:operation>getBookmarks</con:operation><con:request name="Récupérer tous les Bookmarks" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e62783f8-788f-446d-a30a-c56cbaeceb21"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getBookmarks>\r
+         <!--Optional:-->\r
+         <sid>${#TestSuite#sid}</sid>\r
+      </ws:getBookmarks>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9ba44600-220b-4e22-9080-9893e2904ae4" name="SOAP Response"/><con:assertion type="Schema Compliance" id="2fd2ba82-b0b6-4040-81ee-b312defb9b2e" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="003a1cef-3cb4-4905-aba3-2f0e321a10a6" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/getBookmarks"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="transfer bookmarkId" id="f601514f-ffae-415c-bbdd-eeb1c81009d1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>docId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Récupérer tous les Bookmarks</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns1='http://ws.logicaldoc.com';
+declare namespace ns2='http://endpoint.soap.webservice.logicaldoc.com/';
+//id[contains(text(),"${#TestCase#docId}")]/targetId</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>Remove bookmark from document</con:targetStep><con:targetPath>
+</con:targetPath><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Remove bookmark from document" id="c5103396-ee0f-40e6-a4c0-0530c394b8ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapBookmarkServiceServiceSoapBinding</con:interface><con:operation>deleteBookmark</con:operation><con:request name="Remove bookmark from document" id="1cb11fea-7b99-4d6f-b924-2780b1fef779"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Bookmark</con:endpoint><con:request>103</con:request><con:assertion type="SOAP Response" id="fe09dded-dd76-4f0f-bf0a-73d32e3537c8"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>docId</con:name><con:value>103</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>sid</con:name><con:value>31053055-1538-4db7-beb0-f703afc71154</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
