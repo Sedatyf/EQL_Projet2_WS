@@ -4702,7 +4702,7 @@ def tcase = project.testSuites["LogicalDoc TestSuite"].testCases["Login"] ;
 def tstep = tcase.getTestStepByName("Login");
 
 def responseTestSuite1 = tstep.getPropertyValue("response");
-def response = responseTestSuite1.replaceAll('xmlns:', "");
+def response = responseTestSuite1.replaceAll('ns2:loginResponse xmlns:ns2="http://ws.logicaldoc.com"', "");
 log.info(response.toString());
 
 def gutils = new com.eviware.soapui.support.GroovyUtils( context );
@@ -4711,13 +4711,11 @@ import com.eviware.soapui.support.XmlHolder
 def holder = new XmlHolder("$responseTestSuite1")
 //def holder = gutils.getXmlHolder("$responseTestSuite1");
 
+//holder.declareNamespace('soapenv', "http://schemas.xmlsoap.org/soap/envelope/")
+//holder.declareNamespace('ns2', "http://ws.logicaldoc.com")
+//holder.declareNamespace('ns1', 'http://endpoint.soap.webservice.logicaldoc.com')
 
-
-holder.declareNamespace('soapenv', "http://schemas.xmlsoap.org/soap/envelope/")
-holder.declareNamespace('ns2', "http://ws.logicaldoc.com")
-holder.declareNamespace('ns1', 'http://endpoint.soap.webservice.logicaldoc.com')
-
-def byteResponse = holder.getNodeValue("/soapenv:Envelope[1]/soapenv:Body[1]/ns2:loginResponse/return")
+def byteResponse = holder.getNodeValue("//return")
 
 log.info(byteResponse.toString());
 
