@@ -103,11 +103,9 @@
 			<systemPath>C:/Installation/SmartBear/SoapUI-5.4.0/lib/proxy-vole-20131209.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>org.apache</groupId>
+			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
-			<version>2.4.0.jar</version>
-			<scope>system</scope>
-			<systemPath>C:/Installation/SmartBear/SoapUI-5.4.0/lib/xbean-fixed-2.4.0.jar</systemPath>
+			<version>2.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
