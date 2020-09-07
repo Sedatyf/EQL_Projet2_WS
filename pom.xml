@@ -107,12 +107,12 @@
 			<artifactId>xmlbeans</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/net.sf.saxon/saxon
+<!-- https://mvnrepository.com/artifact/net.sf.saxon/saxon -->
 		<dependency>
     			<groupId>net.sf.saxon</groupId>
     			<artifactId>saxon</artifactId>
     			<version>9.0</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
