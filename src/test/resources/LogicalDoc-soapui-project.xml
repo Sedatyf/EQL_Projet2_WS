@@ -4697,14 +4697,7 @@
          <password>admin</password>
       </ws:login>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="2af706bb-bf38-4057-8075-e1f059feb00a"/><con:assertion type="Valid HTTP Status Codes" id="d2f43ed0-4905-4fd1-a560-212f29fcbcbd" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Vérification sid" id="587045c3-e11a-483e-b2b7-d60403d467fe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>valid</con:operation><con:request name="Vérification sid" id="be801163-fe17-4d9a-b9de-0cbdef661ecd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:valid>
-      	<sid>${#TestCase#sid}</sid>
-      </ws:valid>
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c2613b7a-c3f1-4788-ac3b-298faf8e36f1"/><con:assertion type="SOAP Fault Assertion" id="e4c6ec7e-6af6-459f-b51f-5eb53327da6a"/><con:assertion type="Valid HTTP Status Codes" id="74b04a75-abc9-45fc-af05-bf49e6e5129a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="store sid" id="89f543de-6ba6-4913-ab89-1d87418d47f9"><con:settings/><con:config><script>def project = testRunner.testCase.testSuite.project ;
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="2af706bb-bf38-4057-8075-e1f059feb00a"/><con:assertion type="Valid HTTP Status Codes" id="d2f43ed0-4905-4fd1-a560-212f29fcbcbd" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="store sid" id="89f543de-6ba6-4913-ab89-1d87418d47f9"><con:settings/><con:config><script>def project = testRunner.testCase.testSuite.project ;
 def tcase = project.testSuites["LogicalDoc TestSuite"].testCases["Login"] ; 
 def tstep = tcase.getTestStepByName("Login");
 
@@ -4719,8 +4712,19 @@ def byteResponse = holder.getNodeValue("//*:return")
 
 testRunner.testCase.setPropertyValue("sid", "$byteResponse")
 
-def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//sid.txt")
-inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>fc3a03db-bb33-45f1-9f5a-e3a7dc147559</con:value></con:property></con:properties></con:testCase><con:testCase id="c6377824-01e2-4bd9-96e5-1ae8710d1f78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un-des repertoire.s" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="52908e57-03ae-4082-b173-4e9be0fce033"><con:settings/><con:config><script>def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//sid.txt")
+testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"sid.txt")
+inputFile.write("$byteResponse")</script></con:config></con:testStep><con:testStep type="request" name="Vérification sid" id="587045c3-e11a-483e-b2b7-d60403d467fe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>valid</con:operation><con:request name="Vérification sid" id="be801163-fe17-4d9a-b9de-0cbdef661ecd"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:valid>
+      	<sid>${#TestCase#sid}</sid>
+      </ws:valid>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c2613b7a-c3f1-4788-ac3b-298faf8e36f1"/><con:assertion type="SOAP Fault Assertion" id="e4c6ec7e-6af6-459f-b51f-5eb53327da6a"/><con:assertion type="Valid HTTP Status Codes" id="74b04a75-abc9-45fc-af05-bf49e6e5129a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>9cb5afdc-56ed-48f0-92c1-b415b2449e54</con:value></con:property></con:properties></con:testCase><con:testCase id="c6377824-01e2-4bd9-96e5-1ae8710d1f78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un-des repertoire.s" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="52908e57-03ae-4082-b173-4e9be0fce033"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"sid.txt")
 
 def fileContent = inputFile.getText()   
 
@@ -4750,18 +4754,36 @@ def holder = gutils.getXmlHolder("$responseTestSuite1");
 
 def byteResponse = holder.getNodeValue("//*:folderId")
 
-def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//folderId.txt")
-inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>fc3a03db-bb33-45f1-9f5a-e3a7dc147559</con:value></con:property></con:properties></con:testCase><con:testCase id="85ea68ca-41aa-4724-9633-afa340e2a8a8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un document" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get file" id="5378a313-24fd-4532-985c-dc57dab2adf2"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"folderId.txt")
+inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>9cb5afdc-56ed-48f0-92c1-b415b2449e54</con:value></con:property></con:properties></con:testCase><con:testCase id="85ea68ca-41aa-4724-9633-afa340e2a8a8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un document" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get file" id="5378a313-24fd-4532-985c-dc57dab2adf2"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
 resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
 myFile = new File(resourceDir,"testprops.txt")
 
 testRunner.testCase.setPropertyValue("filePath", "$myFile")
-log.info(myFile)</script></con:config></con:testStep><con:testStep type="request" name="UploadDocument" id="a84779c8-741d-49b8-ba36-bf753fca69b0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapDocumentServiceServiceSoapBinding</con:interface><con:operation>upload</con:operation><con:request name="UploadDocument" id="c7ab5888-70f5-4c80-9235-c236d00d1039"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+log.info(myFile)</script></con:config></con:testStep><con:testStep type="groovy" name="get sid" id="530a4737-e1c0-4152-ae53-cc7c8138e29d"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"sid.txt")
+
+def fileContent = inputFile.getText()   
+
+log.info("$fileContent")
+
+testRunner.testCase.setPropertyValue("sid", "$fileContent")</script></con:config></con:testStep><con:testStep type="groovy" name="get folder id" id="ddf0b886-f845-48ed-8e45-2159a4bd35c3"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"folderId.txt")
+
+def fileContent = inputFile.getText()   
+
+log.info("$fileContent")
+
+testRunner.testCase.setPropertyValue("folder_id", "$fileContent")</script></con:config></con:testStep><con:testStep type="request" name="UploadDocument" id="a84779c8-741d-49b8-ba36-bf753fca69b0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapDocumentServiceServiceSoapBinding</con:interface><con:operation>upload</con:operation><con:request name="UploadDocument" id="c7ab5888-70f5-4c80-9235-c236d00d1039"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="WsdlSettings@enable-mtom">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@enable_inline_files">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:upload>\r
-         <sid>${#TestSuite#sid}</sid>
-         <folderId>${#TestSuite#folderId}</folderId>
+         <sid>${#TestCase#sid}</sid>
+         <folderId>${#TestCase#folder_id}</folderId>
          <release>1.0</release>
          <filename>testprops.txt</filename>
          <language>fr</language>
@@ -4772,19 +4794,35 @@ log.info(myFile)</script></con:config></con:testStep><con:testStep type="request
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:create>
-      	<sid>${#TestSuite#sid}</sid>
+      	<sid>${#TestCase#sid}</sid>
       	<document>
       		<id>125</id>
       		<fileSize>15</fileSize>
       		<date>2020-09-04 15:17:00</date>
       		<type>text/plain</type>
       		<fileName>test_create.txt</fileName>
-      		<folderId>${#TestSuite#folderId}</folderId>
+      		<folderId>${#TestCase#folder_id}</folderId>
       	</document>
       	<content>file:testprops.txt</content>
       </ws:create>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="994efe3a-807c-43f8-93b6-0a90bdadeafb"/><con:assertion type="SOAP Fault Assertion" id="ff820582-2d1f-4f04-8518-4fb5705db7c9"/><con:assertion type="Valid HTTP Status Codes" id="c6569caf-0467-45ed-9b87-96dcbbb73cbc" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>testprops.txt</con:name><con:contentType>text/plain</con:contentType><con:contentId>testprops.txt</con:contentId><con:part>&lt;anonymous></con:part><con:url>${#TestCase#filePath}</con:url><con:id>8b433f7f-dac4-4ab5-89cf-f99a56e27e05</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="401108b9-235a-4d58-aff1-07bf5ccb8207"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>createdId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateDocument</con:sourceStep><con:sourcePath>//id</con:sourcePath><con:targetType>createdId</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:properties><con:property><con:name>filePath</con:name><con:value>C:\Users\formation\Documents\Projet2_WS_dev\src\test\resources\testprops.txt</con:value></con:property></con:properties></con:testCase><con:testCase id="85869d94-5132-43d0-8438-4d7d5419fcfe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Chercher document par mots clefs" searchProperties="true"><con:settings/><con:testStep type="request" id="9e21ec50-9be3-49fb-b4f1-4cebf7d89f7b" name="findByKeyword"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>findByFilename</con:operation><con:request name="findByKeyword" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6783c23d-3d24-4c6a-91ad-4331e3a4e621"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="994efe3a-807c-43f8-93b6-0a90bdadeafb"/><con:assertion type="SOAP Fault Assertion" id="ff820582-2d1f-4f04-8518-4fb5705db7c9"/><con:assertion type="Valid HTTP Status Codes" id="c6569caf-0467-45ed-9b87-96dcbbb73cbc" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>testprops.txt</con:name><con:contentType>text/plain</con:contentType><con:contentId>testprops.txt</con:contentId><con:part>&lt;anonymous></con:part><con:url>${#TestCase#filePath}</con:url><con:id>8b433f7f-dac4-4ab5-89cf-f99a56e27e05</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="401108b9-235a-4d58-aff1-07bf5ccb8207"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>createdId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateDocument</con:sourceStep><con:sourcePath>//id</con:sourcePath><con:targetType>createdId</con:targetType><con:targetStep>#TestSuite#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="store doc id" id="67b8828f-bd35-436f-8dec-09a90f53c689"><con:settings/><con:config><script>def project = testRunner.testCase.testSuite.project ;
+def tcase = project.testSuites["LogicalDoc TestSuite"].testCases["Créer un document"] ; 
+def tstep = tcase.getTestStepByName("CreateDocument");
+
+def responseTestSuite1 = tstep.getPropertyValue("response");
+
+log.info(responseTestSuite1.toString());
+
+def gutils = new com.eviware.soapui.support.GroovyUtils( context );
+def holder = gutils.getXmlHolder("$responseTestSuite1");
+
+def byteResponse = holder.getNodeValue("//*:id")
+
+testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"docId.txt")
+inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties><con:property><con:name>filePath</con:name><con:value>C:\Users\formation\Documents\Projet2_WS_dev\src\test\resources\testprops.txt</con:value></con:property><con:property><con:name>sid</con:name><con:value>9cb5afdc-56ed-48f0-92c1-b415b2449e54</con:value></con:property><con:property><con:name>folder_id</con:name><con:value>134</con:value></con:property></con:properties></con:testCase><con:testCase id="85869d94-5132-43d0-8438-4d7d5419fcfe" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Chercher document par mots clefs" searchProperties="true"><con:settings/><con:testStep type="request" id="9e21ec50-9be3-49fb-b4f1-4cebf7d89f7b" name="findByKeyword"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapSearchServiceServiceSoapBinding</con:interface><con:operation>findByFilename</con:operation><con:request name="findByKeyword" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6783c23d-3d24-4c6a-91ad-4331e3a4e621"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Search</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:findByFilename>\r
@@ -4867,22 +4905,42 @@ log.info(myFile)</script></con:config></con:testStep><con:testStep type="request
          <sid>${#TestSuite#sid}</sid>\r
       </ws:getBookmarks>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9ba44600-220b-4e22-9080-9893e2904ae4" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="003a1cef-3cb4-4905-aba3-2f0e321a10a6" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="694ccc1b-5cf0-4b61-8af7-ec06cf016474" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/getBookmarks"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>docId</con:name><con:value>103</con:value></con:property></con:properties></con:testCase><con:testCase id="47b68d64-cf6a-4d90-9c05-8ab8db13df39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Supprimer un document" searchProperties="true"><con:settings/><con:testStep type="request" id="18d40a75-6776-4876-92fc-69ba663062c0" name="deleteDocument"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapDocumentServiceServiceSoapBinding</con:interface><con:operation>delete</con:operation><con:request name="deleteDocument" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2c1be76e-c40f-4cab-a6eb-4749d286d092"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:delete>\r
-         <!--Optional:-->\r
-         <sid>${#TestSuite#sid}</sid>\r
-         <docId>${#TestSuite#createdId}</docId>\r
-      </ws:delete>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="20439c79-3f8f-4db9-98e3-b24585e807ca" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="61fa7060-4b38-46fc-8d60-68d7ff09f397" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="0e678a32-1c4c-4c6c-bc1d-8aeeefabf975" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/delete"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d19aedad-e0d0-448b-bdd6-2fdc8860420f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>docId</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7d88f1b5-b619-46b9-b342-ccbeb918522f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Supprimer dossier" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="8f48bcb9-2bc2-4fef-9489-9bf8ea8656d5"><con:settings/><con:config><script>def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//sid.txt")
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9ba44600-220b-4e22-9080-9893e2904ae4" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="003a1cef-3cb4-4905-aba3-2f0e321a10a6" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="694ccc1b-5cf0-4b61-8af7-ec06cf016474" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Bookmark/getBookmarks"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>docId</con:name><con:value>103</con:value></con:property></con:properties></con:testCase><con:testCase id="47b68d64-cf6a-4d90-9c05-8ab8db13df39" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Supprimer un document" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="63af733f-7ef6-4775-829f-d482a7d0d43b"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"sid.txt")
 
 def fileContent = inputFile.getText()   
 
 log.info("$fileContent")
 
-testRunner.testCase.setPropertyValue("sid", "$fileContent")</script></con:config></con:testStep><con:testStep type="groovy" name="get folder id" id="0ff00ba5-b1f3-47d0-890e-9527ad56bb3c"><con:settings/><con:config><script>def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//folderId.txt")
+testRunner.testCase.setPropertyValue("sid", "$fileContent")</script></con:config></con:testStep><con:testStep type="groovy" name="get doc id" id="384a9db5-bd7a-425a-a167-aff7a00f4394"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"docId.txt")
+
+def fileContent = inputFile.getText()   
+
+log.info("$fileContent")
+
+testRunner.testCase.setPropertyValue("doc_id", "$fileContent")</script></con:config></con:testStep><con:testStep type="request" id="18d40a75-6776-4876-92fc-69ba663062c0" name="deleteDocument"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapDocumentServiceServiceSoapBinding</con:interface><con:operation>delete</con:operation><con:request name="deleteDocument" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="2c1be76e-c40f-4cab-a6eb-4749d286d092"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Document</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:delete>\r
+         <!--Optional:-->\r
+         <sid>${#TestCase#sid}</sid>\r
+         <docId>${#TestCase#doc_id}</docId>\r
+      </ws:delete>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="20439c79-3f8f-4db9-98e3-b24585e807ca" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="61fa7060-4b38-46fc-8d60-68d7ff09f397" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="0e678a32-1c4c-4c6c-bc1d-8aeeefabf975" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Document/delete"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d19aedad-e0d0-448b-bdd6-2fdc8860420f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>docId</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>9cb5afdc-56ed-48f0-92c1-b415b2449e54</con:value></con:property><con:property><con:name>doc_id</con:name><con:value>141</con:value></con:property></con:properties></con:testCase><con:testCase id="7d88f1b5-b619-46b9-b342-ccbeb918522f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Supprimer dossier" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="8f48bcb9-2bc2-4fef-9489-9bf8ea8656d5"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"sid.txt")
+
+def fileContent = inputFile.getText()   
+
+log.info("$fileContent")
+
+testRunner.testCase.setPropertyValue("sid", "$fileContent")</script></con:config></con:testStep><con:testStep type="groovy" name="get folder id" id="0ff00ba5-b1f3-47d0-890e-9527ad56bb3c"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
+inputFile = new File(resourceDir,"folderId.txt")
 
 def fileContent = inputFile.getText()   
 
@@ -4897,7 +4955,7 @@ testRunner.testCase.setPropertyValue("folder_id", "$fileContent")</script></con:
          <folderId>${#TestCase#folder_id}</folderId>\r
       </ws:delete>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="90fa6cbd-f8fd-4db6-9e09-eb96a2c27aa8" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="1298a935-c098-4c8e-92f1-36cf75fafa9f" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="b1f476b0-94dc-44d7-aa6c-5da37ec2424d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/delete"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>folder_id</con:name><con:value>127</con:value></con:property><con:property><con:name>sid</con:name><con:value>fc3a03db-bb33-45f1-9f5a-e3a7dc147559</con:value></con:property></con:properties></con:testCase><con:testCase id="1a8d9db6-a1fe-40d4-9981-3fe65a54ac8f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Logout" searchProperties="true"><con:settings/><con:testStep type="request" name="Logout" id="02178861-743f-4d53-8865-bb28ace4722c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="Logout" id="0a51643d-7293-4153-91a0-19e4e31c0ff3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="90fa6cbd-f8fd-4db6-9e09-eb96a2c27aa8" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="1298a935-c098-4c8e-92f1-36cf75fafa9f" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="b1f476b0-94dc-44d7-aa6c-5da37ec2424d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/delete"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>folder_id</con:name><con:value>134</con:value></con:property><con:property><con:name>sid</con:name><con:value>9cb5afdc-56ed-48f0-92c1-b415b2449e54</con:value></con:property></con:properties></con:testCase><con:testCase id="1a8d9db6-a1fe-40d4-9981-3fe65a54ac8f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Logout" searchProperties="true"><con:settings/><con:testStep type="request" name="Logout" id="02178861-743f-4d53-8865-bb28ace4722c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SoapAuthServiceServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="Logout" id="0a51643d-7293-4153-91a0-19e4e31c0ff3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8093/logicaldoc/services/Auth</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.logicaldoc.com">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:logout/>\r
