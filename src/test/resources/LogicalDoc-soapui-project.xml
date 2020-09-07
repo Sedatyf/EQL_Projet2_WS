@@ -4717,7 +4717,7 @@ holder.declareNamespace('soapenv', "http://schemas.xmlsoap.org/soap/envelope/")
 holder.declareNamespace('ns2', "http://ws.logicaldoc.com")
 holder.declareNamespace('ns1', 'http://endpoint.soap.webservice.logicaldoc.com')
 
-def byteResponse = holder.getNodeValue("/soapenv:Envelope[1]/soapenv:Body[1]/ns2:loginResponse/return")
+def byteResponse = holder.getNodeValue("//ns2:loginResponse/return")
 
 log.info(byteResponse.toString());
 
