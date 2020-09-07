@@ -4706,9 +4706,12 @@ def responseTestSuite1 = tstep.getPropertyValue("response");
 log.info(responseTestSuite1.toString());
 
 def gutils = new com.eviware.soapui.support.GroovyUtils( context );
-def holder = gutils.getXmlHolder("$responseTestSuite1");
 
 import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder("$responseTestSuite1")
+//def holder = gutils.getXmlHolder("$responseTestSuite1");
+
+
 
 holder.declareNamespace('soapenv', "http://schemas.xmlsoap.org/soap/envelope/")
 holder.declareNamespace('ns2', "http://ws.logicaldoc.com")
