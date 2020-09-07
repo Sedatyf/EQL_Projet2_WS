@@ -4701,7 +4701,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ws:valid>
-      	<sid>${#TestSuite#sid}</sid>
+      	<sid>${#TestCase#sid}</sid>
       </ws:valid>
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c2613b7a-c3f1-4788-ac3b-298faf8e36f1"/><con:assertion type="SOAP Fault Assertion" id="e4c6ec7e-6af6-459f-b51f-5eb53327da6a"/><con:assertion type="Valid HTTP Status Codes" id="74b04a75-abc9-45fc-af05-bf49e6e5129a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="store sid" id="89f543de-6ba6-4913-ab89-1d87418d47f9"><con:settings/><con:config><script>def project = testRunner.testCase.testSuite.project ;
@@ -4717,9 +4717,10 @@ def holder = gutils.getXmlHolder("$responseTestSuite1");
 
 def byteResponse = holder.getNodeValue("//*:return")
 
+testRunner.testCase.setPropertyValue("sid", "$byteResponse")
 
 def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//var.txt")
-inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="c6377824-01e2-4bd9-96e5-1ae8710d1f78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un-des repertoire.s" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="52908e57-03ae-4082-b173-4e9be0fce033"><con:settings/><con:config><script>def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//var.txt")
+inputFile.write("$byteResponse")</script></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>692a730e-023a-4ebc-8eaa-27b7e6350f2a</con:value></con:property></con:properties></con:testCase><con:testCase id="c6377824-01e2-4bd9-96e5-1ae8710d1f78" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un-des repertoire.s" searchProperties="true"><con:settings/><con:testStep type="groovy" name="get sid" id="52908e57-03ae-4082-b173-4e9be0fce033"><con:settings/><con:config><script>def inputFile = new File("C://Users//formation//Documents//Projet2_WS_dev//src//test//resources//var.txt")
 
 def fileContent = inputFile.getText()   
 
@@ -4736,7 +4737,7 @@ testRunner.testCase.setPropertyValue("sid", "$fileContent")</script></con:config
          <name>TestFolder2</name>\r
       </ws:createFolder>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="313122f1-d7ce-4ea8-b28b-26cb7e8bafd9" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="637842f0-7582-4860-8ca7-26c8d227b2f6" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="f8a3e6c0-715f-4557-bbc1-dc022acc4fbd" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createFolder"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>a18ad3fb-af5c-4e2c-a7cb-625511096f2d</con:value></con:property></con:properties></con:testCase><con:testCase id="85ea68ca-41aa-4724-9633-afa340e2a8a8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un document" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get file" id="5378a313-24fd-4532-985c-dc57dab2adf2"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="313122f1-d7ce-4ea8-b28b-26cb7e8bafd9" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="637842f0-7582-4860-8ca7-26c8d227b2f6" name="Not SOAP Fault"/><con:assertion type="Valid HTTP Status Codes" id="f8a3e6c0-715f-4557-bbc1-dc022acc4fbd" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://endpoint.soap.webservice.logicaldoc.com/Folder/createFolder"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>sid</con:name><con:value>692a730e-023a-4ebc-8eaa-27b7e6350f2a</con:value></con:property></con:properties></con:testCase><con:testCase id="85ea68ca-41aa-4724-9633-afa340e2a8a8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Créer un document" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Get file" id="5378a313-24fd-4532-985c-dc57dab2adf2"><con:settings/><con:config><script>testFile = new File(testRunner.testCase.testSuite.project.getPath())
 resourceDir = new File(testFile.getParentFile().getParentFile(), "resources")
 myFile = new File(resourceDir,"testprops.txt")
 
