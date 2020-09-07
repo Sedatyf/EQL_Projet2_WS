@@ -4708,7 +4708,7 @@ log.info(responseTestSuite1.toString());
 def gutils = new com.eviware.soapui.support.GroovyUtils( context );
 def holder = gutils.getXmlHolder("$responseTestSuite1");
 
-def byteResponse = holder.getNodeValue("//*:return")
+def byteResponse = holder.getNodeValue("//ns2:return")
 
 testRunner.testCase.setPropertyValue("sid", "$byteResponse")
 
