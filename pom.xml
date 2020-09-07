@@ -107,12 +107,21 @@
 			<artifactId>xmlbeans</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans-xpath -->
 		<dependency>
     			<groupId>org.apache.xmlbeans</groupId>
     			<artifactId>xmlbeans-xpath</artifactId>
     			<version>2.6.0</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.sf.saxon/saxon-he -->
+		<dependency>
+    			<groupId>net.sf.saxon</groupId>
+    			<artifactId>saxon-he</artifactId>
+    			<version>9.2.1.5</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>log4j</groupId>
